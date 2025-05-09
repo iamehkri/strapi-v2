@@ -4,7 +4,8 @@
   "info": {
     "singularName": "case-study",
     "pluralName": "case-studies",
-    "displayName": "Case Study"
+    "displayName": "Case Study",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,45 @@
     },
     "pubDate": {
       "type": "date"
+    },
+    "featuredImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "introText": {
+      "type": "richtext"
+    },
+    "bodyText": {
+      "type": "richtext"
+    },
+    "concText": {
+      "type": "richtext"
+    },
+    "caseSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.slider"
+    },
+    "caseIconbox": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.icon-box"
+    },
+    "caseStats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat-box"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

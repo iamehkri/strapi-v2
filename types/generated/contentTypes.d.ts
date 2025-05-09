@@ -501,6 +501,7 @@ export interface ApiCareerCareer extends Struct.CollectionTypeSchema {
 export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
   collectionName: 'case_studies';
   info: {
+    description: '';
     displayName: 'Case Study';
     pluralName: 'case-studies';
     singularName: 'case-study';
@@ -509,10 +510,19 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    bodyText: Schema.Attribute.RichText;
+    caseIconbox: Schema.Attribute.Component<'shared.icon-box', true>;
+    caseSlider: Schema.Attribute.Component<'shared.slider', false>;
+    caseStats: Schema.Attribute.Component<'shared.stat-box', true>;
+    concText: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     excerpt: Schema.Attribute.Text;
+    featuredImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    introText: Schema.Attribute.RichText;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -521,6 +531,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     pubDate: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'Title'>;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
