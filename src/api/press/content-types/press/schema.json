@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presses",
+  "info": {
+    "singularName": "press",
+    "pluralName": "presses",
+    "displayName": "Press",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "pressTitle": {
+      "type": "string"
+    },
+    "pressContent": {
+      "type": "text"
+    },
+    "articleURL": {
+      "type": "string"
+    },
+    "articleImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pressID": {
+      "type": "uid"
+    },
+    "pubDate": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_price_boxes",
+  "info": {
+    "displayName": "priceBox",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "cost": {
+      "type": "integer"
+    },
+    "frequency": {
+      "type": "enumeration",
+      "enum": [
+        "monthly",
+        "annual",
+        "one-time"
+      ]
+    },
+    "point1": {
+      "type": "string"
+    },
+    "point2": {
+      "type": "string"
+    },
+    "point3": {
+      "type": "string"
+    },
+    "point4": {
+      "type": "string"
+    },
+    "point5": {
+      "type": "string"
+    }
+  }
+}

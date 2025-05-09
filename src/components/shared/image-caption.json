@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_image_captions",
+  "info": {
+    "displayName": "ImageCaption",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

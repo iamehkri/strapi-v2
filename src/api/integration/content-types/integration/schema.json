@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "integrations",
+  "info": {
+    "singularName": "integration",
+    "pluralName": "integrations",
+    "displayName": "Integration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "integrationTitle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "integrationTitle"
+    },
+    "integrationSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.slider"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "integrationVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.faq"
+    },
+    "integrationDescription": {
+      "type": "richtext"
+    }
+  }
+}

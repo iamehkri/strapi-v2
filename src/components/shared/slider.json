@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_sliders",
+  "info": {
+    "displayName": "Slider",
+    "description": "Image slider component"
+  },
+  "options": {},
+  "attributes": {
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "interval": {
+      "type": "integer",
+      "default": 5000,
+      "min": 1000,
+      "max": 10000
+    },
+    "showControls": {
+      "type": "boolean",
+      "default": true
+    },
+    "showIndicators": {
+      "type": "boolean",
+      "default": true
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_stat_boxes",
+  "info": {
+    "displayName": "statBox",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "stat": {
+      "type": "string"
+    },
+    "statDesc": {
+      "type": "string"
+    }
+  }
+}

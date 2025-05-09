@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_icon_boxes",
+  "info": {
+    "displayName": "iconBox",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "iconTitle": {
+      "type": "string"
+    },
+    "iconDescription": {
+      "type": "text"
+    },
+    "svgicon": {
+      "type": "customField",
+      "options": {
+        "output": "svg"
+      },
+      "customField": "plugin::icons-field.icon"
+    }
+  }
+}

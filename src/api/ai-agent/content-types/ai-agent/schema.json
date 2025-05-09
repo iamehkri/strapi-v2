@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_agents",
+  "info": {
+    "singularName": "ai-agent",
+    "pluralName": "ai-agents",
+    "displayName": "AI Agent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "agentName": {
+      "type": "string"
+    },
+    "agentSegment": {
+      "type": "string"
+    },
+    "agentBlurb": {
+      "type": "text"
+    },
+    "iconBox": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.icon-box"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.faq"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat-box"
+    },
+    "priceBox": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.price-box"
+    },
+    "agentBlurb2": {
+      "type": "text"
+    },
+    "agentBlurb3": {
+      "type": "text"
+    },
+    "agentAvatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

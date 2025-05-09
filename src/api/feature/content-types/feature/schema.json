@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "features",
+  "info": {
+    "singularName": "feature",
+    "pluralName": "features",
+    "displayName": "Feature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "featureTitle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "featureTitle"
+    },
+    "featureSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.slider"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "feature"
+    },
+    "featureBox": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.icon-box"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "featureMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.faq"
+    },
+    "featureDetails": {
+      "type": "richtext"
+    },
+    "featureBlurb": {
+      "type": "text"
+    },
+    "subfeatures": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subfeature.subfeature",
+      "inversedBy": "features"
+    }
+  }
+}

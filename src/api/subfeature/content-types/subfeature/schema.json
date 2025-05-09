@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subfeatures",
+  "info": {
+    "singularName": "subfeature",
+    "pluralName": "subfeatures",
+    "displayName": "Subfeature"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subFeaturetitle": {
+      "type": "string"
+    },
+    "subFeatureDescription": {
+      "type": "richtext"
+    },
+    "subFeatureExcerpt": {
+      "type": "text"
+    },
+    "subFeatureIcon": {
+      "type": "customField",
+      "options": {
+        "output": "svg"
+      },
+      "customField": "plugin::icons-field.icon"
+    },
+    "features": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::feature.feature",
+      "mappedBy": "subfeatures"
+    }
+  }
+}
