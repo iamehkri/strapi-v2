@@ -429,13 +429,16 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     blogContent: Schema.Attribute.RichText;
     blogExcerpt: Schema.Attribute.Text;
     blogSEO: Schema.Attribute.Component<'shared.seo', false>;
-    blogSlider: Schema.Attribute.Component<'shared.slider', false>;
     blogTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     featuredImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
+    >;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
@@ -516,7 +519,6 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
   attributes: {
     bodyText: Schema.Attribute.RichText;
     caseIconbox: Schema.Attribute.Component<'shared.icon-box', true>;
-    caseSlider: Schema.Attribute.Component<'shared.slider', false>;
     caseStats: Schema.Attribute.Component<'shared.stat-box', true>;
     concText: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
@@ -525,6 +527,10 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     excerpt: Schema.Attribute.Text;
     featuredImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
+    >;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
     introText: Schema.Attribute.RichText;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -578,8 +584,11 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     featureMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    featureSlider: Schema.Attribute.Component<'shared.slider', false>;
     featureTitle: Schema.Attribute.String;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -620,8 +629,11 @@ export interface ApiIntegrationIntegration extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     faq: Schema.Attribute.Component<'shared.faq', true>;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     integrationDescription: Schema.Attribute.RichText;
-    integrationSlider: Schema.Attribute.Component<'shared.slider', false>;
     integrationTitle: Schema.Attribute.String;
     integrationVideo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'

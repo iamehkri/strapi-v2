@@ -18,11 +18,6 @@
       "type": "uid",
       "targetField": "featureTitle"
     },
-    "featureSlider": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.slider"
-    },
     "tags": {
       "type": "relation",
       "relation": "oneToMany",
@@ -72,6 +67,16 @@
       "relation": "manyToMany",
       "target": "api::case-study.case-study",
       "mappedBy": "relateFeature"
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

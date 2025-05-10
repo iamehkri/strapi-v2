@@ -111,32 +111,6 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
-  info: {
-    description: 'Image slider component';
-    displayName: 'Slider';
-  };
-  attributes: {
-    autoplay: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    gallery: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    interval: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 10000;
-          min: 1000;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<5000>;
-    showControls: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    showIndicators: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-  };
-}
-
 export interface SharedStatBox extends Struct.ComponentSchema {
   collectionName: 'components_shared_stat_boxes';
   info: {
@@ -158,7 +132,6 @@ declare module '@strapi/strapi' {
       'shared.open-graph': SharedOpenGraph;
       'shared.price-box': SharedPriceBox;
       'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
       'shared.stat-box': SharedStatBox;
     }
   }

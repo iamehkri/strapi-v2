@@ -44,11 +44,6 @@
     "concText": {
       "type": "richtext"
     },
-    "caseSlider": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.slider"
-    },
     "caseIconbox": {
       "type": "component",
       "repeatable": true,
@@ -81,6 +76,16 @@
       "relation": "manyToMany",
       "target": "api::integration.integration",
       "inversedBy": "relateCaseStudy"
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

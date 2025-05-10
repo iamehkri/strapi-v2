@@ -3,13 +3,10 @@
 import { Tag } from '../../../tag/content-types/tag/tag';
 import { Media } from '../../../../common/schemas/Media';
 import { Seo } from '../../../../components/shared/interfaces/Seo';
-import { Slider } from '../../../../components/shared/interfaces/Slider';
 import { Tag_Plain } from '../../../tag/content-types/tag/tag';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
-import { Slider_Plain } from '../../../../components/shared/interfaces/Slider';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
-import { Slider_NoRelations } from '../../../../components/shared/interfaces/Slider';
 import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Blog {
@@ -22,8 +19,8 @@ export interface Blog {
     tags: { data: Tag[] };
     featuredImage?: { data: Media };
     blogSEO?: Seo;
-    blogSlider?: Slider;
     pubDate?: Date;
+    gallery?: { data: Media[] };
   };
 }
 export interface Blog_Plain {
@@ -35,8 +32,8 @@ export interface Blog_Plain {
   tags: Tag_Plain[];
   featuredImage?: Media_Plain;
   blogSEO?: Seo_Plain;
-  blogSlider?: Slider_Plain;
   pubDate?: Date;
+  gallery?: Media_Plain[];
 }
 
 export interface Blog_NoRelations {
@@ -48,8 +45,8 @@ export interface Blog_NoRelations {
   tags: number[];
   featuredImage?: number;
   blogSEO?: Seo_NoRelations;
-  blogSlider?: Slider_NoRelations;
   pubDate?: Date;
+  gallery?: number[];
 }
 
 export interface Blog_AdminPanelLifeCycle {
@@ -61,6 +58,6 @@ export interface Blog_AdminPanelLifeCycle {
   tags: AdminPanelRelationPropertyModification<Tag_Plain>;
   featuredImage?: AdminPanelRelationPropertyModification<Media_Plain>;
   blogSEO?: Seo_Plain;
-  blogSlider?: Slider_Plain;
   pubDate?: Date;
+  gallery?: AdminPanelRelationPropertyModification<Media_Plain>[];
 }
