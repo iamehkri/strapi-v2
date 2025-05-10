@@ -4,7 +4,7 @@ import { Blog } from '../../../blog/content-types/blog/blog';
 import { Feature } from '../../../feature/content-types/feature/feature';
 import { Blog_Plain } from '../../../blog/content-types/blog/blog';
 import { Feature_Plain } from '../../../feature/content-types/feature/feature';
-import { AdminPanelRelationPropertyModification } from '../../../../common/schemas-to-ts/AdminPanelRelationPropertyModification';
+import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Tag {
   id: number;

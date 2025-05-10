@@ -2,7 +2,7 @@
 
 import { Feature } from '../../../feature/content-types/feature/feature';
 import { Feature_Plain } from '../../../feature/content-types/feature/feature';
-import { AdminPanelRelationPropertyModification } from '../../../../common/schemas-to-ts/AdminPanelRelationPropertyModification';
+import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Subfeature {
   id: number;

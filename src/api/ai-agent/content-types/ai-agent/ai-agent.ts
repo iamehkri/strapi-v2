@@ -5,19 +5,19 @@ import { Seo } from '../../../../components/shared/interfaces/Seo';
 import { Faq } from '../../../../components/shared/interfaces/Faq';
 import { StatBox } from '../../../../components/shared/interfaces/StatBox';
 import { PriceBox } from '../../../../components/shared/interfaces/PriceBox';
-import { Media } from '../../../../common/schemas-to-ts/Media';
+import { Media } from '../../../../common/schemas/Media';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
 import { StatBox_Plain } from '../../../../components/shared/interfaces/StatBox';
 import { PriceBox_Plain } from '../../../../components/shared/interfaces/PriceBox';
-import { Media_Plain } from '../../../../common/schemas-to-ts/Media';
+import { Media_Plain } from '../../../../common/schemas/Media';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
 import { StatBox_NoRelations } from '../../../../components/shared/interfaces/StatBox';
 import { PriceBox_NoRelations } from '../../../../components/shared/interfaces/PriceBox';
-import { AdminPanelRelationPropertyModification } from '../../../../common/schemas-to-ts/AdminPanelRelationPropertyModification';
+import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface AiAgent {
   id: number;

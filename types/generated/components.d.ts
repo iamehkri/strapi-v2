@@ -26,7 +26,7 @@ export interface SharedIconBox extends Struct.ComponentSchema {
       Schema.Attribute.CustomField<
         'plugin::icons-field.icon',
         {
-          output: 'svg';
+          output: 'name';
         }
       >;
   };

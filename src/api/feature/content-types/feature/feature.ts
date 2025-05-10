@@ -4,21 +4,21 @@ import { Slider } from '../../../../components/shared/interfaces/Slider';
 import { Tag } from '../../../tag/content-types/tag/tag';
 import { IconBox } from '../../../../components/shared/interfaces/IconBox';
 import { Seo } from '../../../../components/shared/interfaces/Seo';
-import { Media } from '../../../../common/schemas-to-ts/Media';
+import { Media } from '../../../../common/schemas/Media';
 import { Faq } from '../../../../components/shared/interfaces/Faq';
 import { Subfeature } from '../../../subfeature/content-types/subfeature/subfeature';
 import { Slider_Plain } from '../../../../components/shared/interfaces/Slider';
 import { Tag_Plain } from '../../../tag/content-types/tag/tag';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
-import { Media_Plain } from '../../../../common/schemas-to-ts/Media';
+import { Media_Plain } from '../../../../common/schemas/Media';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
 import { Subfeature_Plain } from '../../../subfeature/content-types/subfeature/subfeature';
 import { Slider_NoRelations } from '../../../../components/shared/interfaces/Slider';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
-import { AdminPanelRelationPropertyModification } from '../../../../common/schemas-to-ts/AdminPanelRelationPropertyModification';
+import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Feature {
   id: number;
