@@ -5,11 +5,17 @@ import { Slider } from '../../../../components/shared/interfaces/Slider';
 import { IconBox } from '../../../../components/shared/interfaces/IconBox';
 import { StatBox } from '../../../../components/shared/interfaces/StatBox';
 import { Seo } from '../../../../components/shared/interfaces/Seo';
+import { AiAgent } from '../../../ai-agent/content-types/ai-agent/ai-agent';
+import { Feature } from '../../../feature/content-types/feature/feature';
+import { Integration } from '../../../integration/content-types/integration/integration';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { Slider_Plain } from '../../../../components/shared/interfaces/Slider';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { StatBox_Plain } from '../../../../components/shared/interfaces/StatBox';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
+import { AiAgent_Plain } from '../../../ai-agent/content-types/ai-agent/ai-agent';
+import { Feature_Plain } from '../../../feature/content-types/feature/feature';
+import { Integration_Plain } from '../../../integration/content-types/integration/integration';
 import { Slider_NoRelations } from '../../../../components/shared/interfaces/Slider';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { StatBox_NoRelations } from '../../../../components/shared/interfaces/StatBox';
@@ -31,6 +37,9 @@ export interface CaseStudy {
     caseIconbox: IconBox[];
     caseStats: StatBox[];
     seo?: Seo;
+    relateAgents?: { data: AiAgent[] };
+    relateFeature?: { data: Feature[] };
+    relateIntegrations?: { data: Integration[] };
   };
 }
 export interface CaseStudy_Plain {
@@ -47,6 +56,9 @@ export interface CaseStudy_Plain {
   caseIconbox: IconBox_Plain[];
   caseStats: StatBox_Plain[];
   seo?: Seo_Plain;
+  relateAgents?: AiAgent_Plain[];
+  relateFeature?: Feature_Plain[];
+  relateIntegrations?: Integration_Plain[];
 }
 
 export interface CaseStudy_NoRelations {
@@ -63,6 +75,9 @@ export interface CaseStudy_NoRelations {
   caseIconbox: IconBox_NoRelations[];
   caseStats: StatBox_NoRelations[];
   seo?: Seo_NoRelations;
+  relateAgents?: number[];
+  relateFeature?: number[];
+  relateIntegrations?: number[];
 }
 
 export interface CaseStudy_AdminPanelLifeCycle {
@@ -79,4 +94,7 @@ export interface CaseStudy_AdminPanelLifeCycle {
   caseIconbox: IconBox_Plain[];
   caseStats: StatBox_Plain[];
   seo?: Seo_Plain;
+  relateAgents?: AdminPanelRelationPropertyModification<AiAgent_Plain>;
+  relateFeature?: AdminPanelRelationPropertyModification<Feature_Plain>;
+  relateIntegrations?: AdminPanelRelationPropertyModification<Integration_Plain>;
 }

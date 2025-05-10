@@ -4,10 +4,12 @@ import { Slider } from '../../../../components/shared/interfaces/Slider';
 import { Seo } from '../../../../components/shared/interfaces/Seo';
 import { Media } from '../../../../common/schemas/Media';
 import { Faq } from '../../../../components/shared/interfaces/Faq';
+import { CaseStudy } from '../../../case-study/content-types/case-study/case-study';
 import { Slider_Plain } from '../../../../components/shared/interfaces/Slider';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
+import { CaseStudy_Plain } from '../../../case-study/content-types/case-study/case-study';
 import { Slider_NoRelations } from '../../../../components/shared/interfaces/Slider';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
@@ -23,6 +25,7 @@ export interface Integration {
     integrationVideo?: { data: Media };
     faq: Faq[];
     integrationDescription?: string;
+    relateCaseStudy?: { data: CaseStudy[] };
   };
 }
 export interface Integration_Plain {
@@ -34,6 +37,7 @@ export interface Integration_Plain {
   integrationVideo?: Media_Plain;
   faq: Faq_Plain[];
   integrationDescription?: string;
+  relateCaseStudy?: CaseStudy_Plain[];
 }
 
 export interface Integration_NoRelations {
@@ -45,6 +49,7 @@ export interface Integration_NoRelations {
   integrationVideo?: number;
   faq: Faq_NoRelations[];
   integrationDescription?: string;
+  relateCaseStudy?: number[];
 }
 
 export interface Integration_AdminPanelLifeCycle {
@@ -56,4 +61,5 @@ export interface Integration_AdminPanelLifeCycle {
   integrationVideo?: AdminPanelRelationPropertyModification<Media_Plain>;
   faq: Faq_Plain[];
   integrationDescription?: string;
+  relateCaseStudy?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
 }

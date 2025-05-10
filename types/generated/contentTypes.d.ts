@@ -402,6 +402,10 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     priceBox: Schema.Attribute.Component<'shared.price-box', true>;
     publishedAt: Schema.Attribute.DateTime;
+    relateCaseStudies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::case-study.case-study'
+    >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     stats: Schema.Attribute.Component<'shared.stat-box', true>;
     updatedAt: Schema.Attribute.DateTime;
@@ -531,6 +535,18 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     pubDate: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
+    relateAgents: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ai-agent.ai-agent'
+    >;
+    relateFeature: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::feature.feature'
+    >;
+    relateIntegrations: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::integration.integration'
+    >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'Title'>;
     Title: Schema.Attribute.String;
@@ -571,6 +587,10 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    relateCaseStudy: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::case-study.case-study'
+    >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'featureTitle'>;
     subfeatures: Schema.Attribute.Relation<
@@ -613,6 +633,10 @@ export interface ApiIntegrationIntegration extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    relateCaseStudy: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::case-study.case-study'
+    >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'integrationTitle'>;
     updatedAt: Schema.Attribute.DateTime;

@@ -16,7 +16,7 @@
     "svgicon": {
       "type": "customField",
       "options": {
-        "output": "name"
+        "output": "svg"
       },
       "customField": "plugin::icons-field.icon"
     }

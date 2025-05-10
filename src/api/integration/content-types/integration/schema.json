@@ -46,6 +46,12 @@
     },
     "integrationDescription": {
       "type": "richtext"
+    },
+    "relateCaseStudy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "relateIntegrations"
     }
   }
 }

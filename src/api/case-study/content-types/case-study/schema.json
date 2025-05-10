@@ -25,14 +25,15 @@
       "type": "date"
     },
     "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "introText": {
       "type": "richtext"
@@ -62,6 +63,24 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "relateAgents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ai-agent.ai-agent",
+      "inversedBy": "relateCaseStudies"
+    },
+    "relateFeature": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::feature.feature",
+      "inversedBy": "relateCaseStudy"
+    },
+    "relateIntegrations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::integration.integration",
+      "inversedBy": "relateCaseStudy"
     }
   }
 }

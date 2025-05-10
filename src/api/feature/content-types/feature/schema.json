@@ -66,6 +66,12 @@
       "relation": "manyToMany",
       "target": "api::subfeature.subfeature",
       "inversedBy": "features"
+    },
+    "relateCaseStudy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "relateFeature"
     }
   }
 }

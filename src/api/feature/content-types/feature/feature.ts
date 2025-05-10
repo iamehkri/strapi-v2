@@ -7,6 +7,7 @@ import { Seo } from '../../../../components/shared/interfaces/Seo';
 import { Media } from '../../../../common/schemas/Media';
 import { Faq } from '../../../../components/shared/interfaces/Faq';
 import { Subfeature } from '../../../subfeature/content-types/subfeature/subfeature';
+import { CaseStudy } from '../../../case-study/content-types/case-study/case-study';
 import { Slider_Plain } from '../../../../components/shared/interfaces/Slider';
 import { Tag_Plain } from '../../../tag/content-types/tag/tag';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
@@ -14,6 +15,7 @@ import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
 import { Subfeature_Plain } from '../../../subfeature/content-types/subfeature/subfeature';
+import { CaseStudy_Plain } from '../../../case-study/content-types/case-study/case-study';
 import { Slider_NoRelations } from '../../../../components/shared/interfaces/Slider';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
@@ -34,6 +36,7 @@ export interface Feature {
     featureDetails?: string;
     featureBlurb?: string;
     subfeatures?: { data: Subfeature[] };
+    relateCaseStudy?: { data: CaseStudy[] };
   };
 }
 export interface Feature_Plain {
@@ -49,6 +52,7 @@ export interface Feature_Plain {
   featureDetails?: string;
   featureBlurb?: string;
   subfeatures?: Subfeature_Plain[];
+  relateCaseStudy?: CaseStudy_Plain[];
 }
 
 export interface Feature_NoRelations {
@@ -64,6 +68,7 @@ export interface Feature_NoRelations {
   featureDetails?: string;
   featureBlurb?: string;
   subfeatures?: number[];
+  relateCaseStudy?: number[];
 }
 
 export interface Feature_AdminPanelLifeCycle {
@@ -79,4 +84,5 @@ export interface Feature_AdminPanelLifeCycle {
   featureDetails?: string;
   featureBlurb?: string;
   subfeatures?: AdminPanelRelationPropertyModification<Subfeature_Plain>;
+  relateCaseStudy?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
 }
