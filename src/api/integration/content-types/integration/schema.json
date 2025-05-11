@@ -60,14 +60,26 @@
       ]
     },
     "integrationIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "nextjs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nextjs-comp"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "integrations"
     }
   }
 }

@@ -69,14 +69,26 @@
       "mappedBy": "relateFeature"
     },
     "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "nextjs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nextjs-comp"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "features"
     }
   }
 }

@@ -7,6 +7,7 @@ import { StatBox } from '../../../../components/shared/interfaces/StatBox';
 import { PriceBox } from '../../../../components/shared/interfaces/PriceBox';
 import { Media } from '../../../../common/schemas/Media';
 import { CaseStudy } from '../../../case-study/content-types/case-study/case-study';
+import { NextjsComp } from '../../../../components/shared/interfaces/NextjsComp';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
@@ -14,11 +15,13 @@ import { StatBox_Plain } from '../../../../components/shared/interfaces/StatBox'
 import { PriceBox_Plain } from '../../../../components/shared/interfaces/PriceBox';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { CaseStudy_Plain } from '../../../case-study/content-types/case-study/case-study';
+import { NextjsComp_Plain } from '../../../../components/shared/interfaces/NextjsComp';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
 import { StatBox_NoRelations } from '../../../../components/shared/interfaces/StatBox';
 import { PriceBox_NoRelations } from '../../../../components/shared/interfaces/PriceBox';
+import { NextjsComp_NoRelations } from '../../../../components/shared/interfaces/NextjsComp';
 import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface AiAgent {
@@ -36,6 +39,7 @@ export interface AiAgent {
     agentBlurb3?: string;
     agentAvatar?: { data: Media };
     relateCaseStudies?: { data: CaseStudy[] };
+    nextjs?: NextjsComp;
   };
 }
 export interface AiAgent_Plain {
@@ -52,6 +56,7 @@ export interface AiAgent_Plain {
   agentBlurb3?: string;
   agentAvatar?: Media_Plain;
   relateCaseStudies?: CaseStudy_Plain[];
+  nextjs?: NextjsComp_Plain;
 }
 
 export interface AiAgent_NoRelations {
@@ -68,6 +73,7 @@ export interface AiAgent_NoRelations {
   agentBlurb3?: string;
   agentAvatar?: number;
   relateCaseStudies?: number[];
+  nextjs?: NextjsComp_NoRelations;
 }
 
 export interface AiAgent_AdminPanelLifeCycle {
@@ -84,4 +90,5 @@ export interface AiAgent_AdminPanelLifeCycle {
   agentBlurb3?: string;
   agentAvatar?: AdminPanelRelationPropertyModification<Media_Plain>;
   relateCaseStudies?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
+  nextjs?: NextjsComp_Plain;
 }

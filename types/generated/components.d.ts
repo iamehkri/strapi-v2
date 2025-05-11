@@ -44,6 +44,19 @@ export interface SharedImageCaption extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedNextjsComp extends Struct.ComponentSchema {
+  collectionName: 'components_shared_nextjs_comps';
+  info: {
+    displayName: 'nextjs-comp';
+    icon: 'code';
+  };
+  attributes: {
+    agent_id: Schema.Attribute.String;
+    component_id: Schema.Attribute.String;
+    form_id: Schema.Attribute.String;
+  };
+}
+
 export interface SharedOpenGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_open_graphs';
   info: {
@@ -129,6 +142,7 @@ declare module '@strapi/strapi' {
       'shared.faq': SharedFaq;
       'shared.icon-box': SharedIconBox;
       'shared.image-caption': SharedImageCaption;
+      'shared.nextjs-comp': SharedNextjsComp;
       'shared.open-graph': SharedOpenGraph;
       'shared.price-box': SharedPriceBox;
       'shared.seo': SharedSeo;

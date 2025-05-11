@@ -7,6 +7,8 @@ import { Media } from '../../../../common/schemas/Media';
 import { Faq } from '../../../../components/shared/interfaces/Faq';
 import { Subfeature } from '../../../subfeature/content-types/subfeature/subfeature';
 import { CaseStudy } from '../../../case-study/content-types/case-study/case-study';
+import { NextjsComp } from '../../../../components/shared/interfaces/NextjsComp';
+import { Article } from '../../../article/content-types/article/article';
 import { Tag_Plain } from '../../../tag/content-types/tag/tag';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
@@ -14,9 +16,12 @@ import { Media_Plain } from '../../../../common/schemas/Media';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
 import { Subfeature_Plain } from '../../../subfeature/content-types/subfeature/subfeature';
 import { CaseStudy_Plain } from '../../../case-study/content-types/case-study/case-study';
+import { NextjsComp_Plain } from '../../../../components/shared/interfaces/NextjsComp';
+import { Article_Plain } from '../../../article/content-types/article/article';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
+import { NextjsComp_NoRelations } from '../../../../components/shared/interfaces/NextjsComp';
 import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Feature {
@@ -34,6 +39,8 @@ export interface Feature {
     subfeatures?: { data: Subfeature[] };
     relateCaseStudy?: { data: CaseStudy[] };
     gallery?: { data: Media[] };
+    nextjs?: NextjsComp;
+    articles?: { data: Article[] };
   };
 }
 export interface Feature_Plain {
@@ -50,6 +57,8 @@ export interface Feature_Plain {
   subfeatures?: Subfeature_Plain[];
   relateCaseStudy?: CaseStudy_Plain[];
   gallery?: Media_Plain[];
+  nextjs?: NextjsComp_Plain;
+  articles?: Article_Plain[];
 }
 
 export interface Feature_NoRelations {
@@ -66,6 +75,8 @@ export interface Feature_NoRelations {
   subfeatures?: number[];
   relateCaseStudy?: number[];
   gallery?: number[];
+  nextjs?: NextjsComp_NoRelations;
+  articles?: number[];
 }
 
 export interface Feature_AdminPanelLifeCycle {
@@ -82,4 +93,6 @@ export interface Feature_AdminPanelLifeCycle {
   subfeatures?: AdminPanelRelationPropertyModification<Subfeature_Plain>;
   relateCaseStudy?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
   gallery?: AdminPanelRelationPropertyModification<Media_Plain>[];
+  nextjs?: NextjsComp_Plain;
+  articles?: AdminPanelRelationPropertyModification<Article_Plain>;
 }

@@ -3,10 +3,13 @@
 import { Tag } from '../../../tag/content-types/tag/tag';
 import { Media } from '../../../../common/schemas/Media';
 import { Seo } from '../../../../components/shared/interfaces/Seo';
+import { NextjsComp } from '../../../../components/shared/interfaces/NextjsComp';
 import { Tag_Plain } from '../../../tag/content-types/tag/tag';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
+import { NextjsComp_Plain } from '../../../../components/shared/interfaces/NextjsComp';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
+import { NextjsComp_NoRelations } from '../../../../components/shared/interfaces/NextjsComp';
 import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Blog {
@@ -21,6 +24,7 @@ export interface Blog {
     blogSEO?: Seo;
     pubDate?: Date;
     gallery?: { data: Media[] };
+    nextjs: NextjsComp[];
   };
 }
 export interface Blog_Plain {
@@ -34,6 +38,7 @@ export interface Blog_Plain {
   blogSEO?: Seo_Plain;
   pubDate?: Date;
   gallery?: Media_Plain[];
+  nextjs: NextjsComp_Plain[];
 }
 
 export interface Blog_NoRelations {
@@ -47,6 +52,7 @@ export interface Blog_NoRelations {
   blogSEO?: Seo_NoRelations;
   pubDate?: Date;
   gallery?: number[];
+  nextjs: NextjsComp_NoRelations[];
 }
 
 export interface Blog_AdminPanelLifeCycle {
@@ -60,4 +66,5 @@ export interface Blog_AdminPanelLifeCycle {
   blogSEO?: Seo_Plain;
   pubDate?: Date;
   gallery?: AdminPanelRelationPropertyModification<Media_Plain>[];
+  nextjs: NextjsComp_Plain[];
 }

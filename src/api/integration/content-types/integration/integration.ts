@@ -4,12 +4,17 @@ import { Seo } from '../../../../components/shared/interfaces/Seo';
 import { Media } from '../../../../common/schemas/Media';
 import { Faq } from '../../../../components/shared/interfaces/Faq';
 import { CaseStudy } from '../../../case-study/content-types/case-study/case-study';
+import { NextjsComp } from '../../../../components/shared/interfaces/NextjsComp';
+import { Article } from '../../../article/content-types/article/article';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
 import { CaseStudy_Plain } from '../../../case-study/content-types/case-study/case-study';
+import { NextjsComp_Plain } from '../../../../components/shared/interfaces/NextjsComp';
+import { Article_Plain } from '../../../article/content-types/article/article';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
+import { NextjsComp_NoRelations } from '../../../../components/shared/interfaces/NextjsComp';
 import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Integration {
@@ -24,6 +29,8 @@ export interface Integration {
     relateCaseStudy?: { data: CaseStudy[] };
     gallery?: { data: Media[] };
     integrationIcon?: { data: Media };
+    nextjs?: NextjsComp;
+    articles?: { data: Article[] };
   };
 }
 export interface Integration_Plain {
@@ -37,6 +44,8 @@ export interface Integration_Plain {
   relateCaseStudy?: CaseStudy_Plain[];
   gallery?: Media_Plain[];
   integrationIcon?: Media_Plain;
+  nextjs?: NextjsComp_Plain;
+  articles?: Article_Plain[];
 }
 
 export interface Integration_NoRelations {
@@ -50,6 +59,8 @@ export interface Integration_NoRelations {
   relateCaseStudy?: number[];
   gallery?: number[];
   integrationIcon?: number;
+  nextjs?: NextjsComp_NoRelations;
+  articles?: number[];
 }
 
 export interface Integration_AdminPanelLifeCycle {
@@ -63,4 +74,6 @@ export interface Integration_AdminPanelLifeCycle {
   relateCaseStudy?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
   gallery?: AdminPanelRelationPropertyModification<Media_Plain>[];
   integrationIcon?: AdminPanelRelationPropertyModification<Media_Plain>;
+  nextjs?: NextjsComp_Plain;
+  articles?: AdminPanelRelationPropertyModification<Article_Plain>;
 }

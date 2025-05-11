@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_nextjs_comps",
+  "info": {
+    "displayName": "nextjs-comp",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "form_id": {
+      "type": "string"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "component_id": {
+      "type": "string"
+    }
+  }
+}

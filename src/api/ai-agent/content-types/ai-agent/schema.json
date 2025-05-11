@@ -52,20 +52,26 @@
       "type": "text"
     },
     "agentAvatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "relateCaseStudies": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::case-study.case-study",
       "mappedBy": "relateAgents"
+    },
+    "nextjs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nextjs-comp"
     }
   }
 }

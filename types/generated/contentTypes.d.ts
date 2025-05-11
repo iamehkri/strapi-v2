@@ -400,6 +400,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
       'api::ai-agent.ai-agent'
     > &
       Schema.Attribute.Private;
+    nextjs: Schema.Attribute.Component<'shared.nextjs-comp', false>;
     priceBox: Schema.Attribute.Component<'shared.price-box', true>;
     publishedAt: Schema.Attribute.DateTime;
     relateCaseStudies: Schema.Attribute.Relation<
@@ -411,6 +412,49 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
+  collectionName: 'articles';
+  info: {
+    displayName: 'article';
+    pluralName: 'articles';
+    singularName: 'article';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    excerpt: Schema.Attribute.Text;
+    features: Schema.Attribute.Relation<'manyToMany', 'api::feature.feature'>;
+    integrations: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::integration.integration'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article.article'
+    > &
+      Schema.Attribute.Private;
+    pubDate: Schema.Attribute.Date;
+    publishedAt: Schema.Attribute.DateTime;
+    screenshots: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    video: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -443,6 +487,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
+    nextjs: Schema.Attribute.Component<'shared.nextjs-comp', true>;
     pubDate: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'blogTitle'>;
@@ -493,6 +538,7 @@ export interface ApiCareerCareer extends Struct.CollectionTypeSchema {
     Location: Schema.Attribute.Enumeration<
       ['Bay Area, CA', 'Plano, TX', 'Remote']
     >;
+    nextjs: Schema.Attribute.Component<'shared.nextjs-comp', false>;
     publishedAt: Schema.Attribute.DateTime;
     requirements: Schema.Attribute.RichText;
     responsibilities: Schema.Attribute.RichText;
@@ -539,6 +585,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       'api::case-study.case-study'
     > &
       Schema.Attribute.Private;
+    nextjs: Schema.Attribute.Component<'shared.nextjs-comp', false>;
     pubDate: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
     relateAgents: Schema.Attribute.Relation<
@@ -574,6 +621,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articles: Schema.Attribute.Relation<'manyToMany', 'api::article.article'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -595,6 +643,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
       'api::feature.feature'
     > &
       Schema.Attribute.Private;
+    nextjs: Schema.Attribute.Component<'shared.nextjs-comp', false>;
     publishedAt: Schema.Attribute.DateTime;
     relateCaseStudy: Schema.Attribute.Relation<
       'manyToMany',
@@ -625,6 +674,7 @@ export interface ApiIntegrationIntegration extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articles: Schema.Attribute.Relation<'manyToMany', 'api::article.article'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -647,6 +697,7 @@ export interface ApiIntegrationIntegration extends Struct.CollectionTypeSchema {
       'api::integration.integration'
     > &
       Schema.Attribute.Private;
+    nextjs: Schema.Attribute.Component<'shared.nextjs-comp', false>;
     publishedAt: Schema.Attribute.DateTime;
     relateCaseStudy: Schema.Attribute.Relation<
       'manyToMany',
@@ -1316,6 +1367,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::ai-agent.ai-agent': ApiAiAgentAiAgent;
+      'api::article.article': ApiArticleArticle;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;

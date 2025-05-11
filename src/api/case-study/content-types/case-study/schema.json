@@ -78,14 +78,20 @@
       "inversedBy": "relateCaseStudy"
     },
     "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "nextjs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nextjs-comp"
     }
   }
 }
