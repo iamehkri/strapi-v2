@@ -23,6 +23,7 @@ export interface Integration {
     integrationDescription?: string;
     relateCaseStudy?: { data: CaseStudy[] };
     gallery?: { data: Media[] };
+    integrationIcon?: { data: Media };
   };
 }
 export interface Integration_Plain {
@@ -35,6 +36,7 @@ export interface Integration_Plain {
   integrationDescription?: string;
   relateCaseStudy?: CaseStudy_Plain[];
   gallery?: Media_Plain[];
+  integrationIcon?: Media_Plain;
 }
 
 export interface Integration_NoRelations {
@@ -47,6 +49,7 @@ export interface Integration_NoRelations {
   integrationDescription?: string;
   relateCaseStudy?: number[];
   gallery?: number[];
+  integrationIcon?: number;
 }
 
 export interface Integration_AdminPanelLifeCycle {
@@ -59,4 +62,5 @@ export interface Integration_AdminPanelLifeCycle {
   integrationDescription?: string;
   relateCaseStudy?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
   gallery?: AdminPanelRelationPropertyModification<Media_Plain>[];
+  integrationIcon?: AdminPanelRelationPropertyModification<Media_Plain>;
 }

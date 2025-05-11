@@ -634,6 +634,9 @@ export interface ApiIntegrationIntegration extends Struct.CollectionTypeSchema {
       true
     >;
     integrationDescription: Schema.Attribute.RichText;
+    integrationIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     integrationTitle: Schema.Attribute.String;
     integrationVideo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
