@@ -41,6 +41,7 @@ export interface Feature {
     gallery?: { data: Media[] };
     nextjs?: NextjsComp;
     articles?: { data: Article[] };
+    featureIcon?: any;
   };
 }
 export interface Feature_Plain {
@@ -59,6 +60,7 @@ export interface Feature_Plain {
   gallery?: Media_Plain[];
   nextjs?: NextjsComp_Plain;
   articles?: Article_Plain[];
+  featureIcon?: any;
 }
 
 export interface Feature_NoRelations {
@@ -77,6 +79,7 @@ export interface Feature_NoRelations {
   gallery?: number[];
   nextjs?: NextjsComp_NoRelations;
   articles?: number[];
+  featureIcon?: any;
 }
 
 export interface Feature_AdminPanelLifeCycle {
@@ -95,4 +98,5 @@ export interface Feature_AdminPanelLifeCycle {
   gallery?: AdminPanelRelationPropertyModification<Media_Plain>[];
   nextjs?: NextjsComp_Plain;
   articles?: AdminPanelRelationPropertyModification<Article_Plain>;
+  featureIcon?: any;
 }

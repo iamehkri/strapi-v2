@@ -629,6 +629,13 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     featureBlurb: Schema.Attribute.Text;
     featureBox: Schema.Attribute.Component<'shared.icon-box', true>;
     featureDetails: Schema.Attribute.RichText;
+    featureIcon: Schema.Attribute.Text &
+      Schema.Attribute.CustomField<
+        'plugin::icons-field.icon',
+        {
+          output: 'svg';
+        }
+      >;
     featureMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
