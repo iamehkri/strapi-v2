@@ -408,6 +408,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
       'api::case-study.case-study'
     >;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID;
     stats: Schema.Attribute.Component<'shared.stat-box', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -812,6 +813,13 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
         maxLength: 200;
       }>;
     feature: Schema.Attribute.Relation<'manyToOne', 'api::feature.feature'>;
+    icon: Schema.Attribute.Text &
+      Schema.Attribute.CustomField<
+        'plugin::icons-field.icon',
+        {
+          output: 'name';
+        }
+      >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'> &
       Schema.Attribute.Private;

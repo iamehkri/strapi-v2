@@ -40,6 +40,7 @@ export interface AiAgent {
     agentAvatar?: { data: Media };
     relateCaseStudies?: { data: CaseStudy[] };
     nextjs?: NextjsComp;
+    slug?: string;
   };
 }
 export interface AiAgent_Plain {
@@ -57,6 +58,7 @@ export interface AiAgent_Plain {
   agentAvatar?: Media_Plain;
   relateCaseStudies?: CaseStudy_Plain[];
   nextjs?: NextjsComp_Plain;
+  slug?: string;
 }
 
 export interface AiAgent_NoRelations {
@@ -74,6 +76,7 @@ export interface AiAgent_NoRelations {
   agentAvatar?: number;
   relateCaseStudies?: number[];
   nextjs?: NextjsComp_NoRelations;
+  slug?: string;
 }
 
 export interface AiAgent_AdminPanelLifeCycle {
@@ -91,4 +94,5 @@ export interface AiAgent_AdminPanelLifeCycle {
   agentAvatar?: AdminPanelRelationPropertyModification<Media_Plain>;
   relateCaseStudies?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
   nextjs?: NextjsComp_Plain;
+  slug?: string;
 }

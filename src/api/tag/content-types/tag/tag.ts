@@ -15,6 +15,7 @@ export interface Tag {
     blog?: { data: Blog };
     feature?: { data: Feature };
     color?: any;
+    icon?: any;
   };
 }
 export interface Tag_Plain {
@@ -25,6 +26,7 @@ export interface Tag_Plain {
   blog?: Blog_Plain;
   feature?: Feature_Plain;
   color?: any;
+  icon?: any;
 }
 
 export interface Tag_NoRelations {
@@ -35,6 +37,7 @@ export interface Tag_NoRelations {
   blog?: number;
   feature?: number;
   color?: any;
+  icon?: any;
 }
 
 export interface Tag_AdminPanelLifeCycle {
@@ -45,4 +48,5 @@ export interface Tag_AdminPanelLifeCycle {
   blog?: AdminPanelRelationPropertyModification<Blog_Plain>;
   feature?: AdminPanelRelationPropertyModification<Feature_Plain>;
   color?: any;
+  icon?: any;
 }

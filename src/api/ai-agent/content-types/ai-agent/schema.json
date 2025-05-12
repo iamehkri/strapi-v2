@@ -72,6 +72,9 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.nextjs-comp"
+    },
+    "slug": {
+      "type": "uid"
     }
   }
 }
