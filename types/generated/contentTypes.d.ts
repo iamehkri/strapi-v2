@@ -410,6 +410,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID;
     stats: Schema.Attribute.Component<'shared.stat-box', true>;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -802,6 +803,7 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    ai_agent: Schema.Attribute.Relation<'manyToOne', 'api::ai-agent.ai-agent'>;
     blog: Schema.Attribute.Relation<'manyToOne', 'api::blog.blog'>;
     color: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color'>;

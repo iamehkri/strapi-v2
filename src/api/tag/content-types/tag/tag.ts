@@ -2,8 +2,10 @@
 
 import { Blog } from '../../../blog/content-types/blog/blog';
 import { Feature } from '../../../feature/content-types/feature/feature';
+import { AiAgent } from '../../../ai-agent/content-types/ai-agent/ai-agent';
 import { Blog_Plain } from '../../../blog/content-types/blog/blog';
 import { Feature_Plain } from '../../../feature/content-types/feature/feature';
+import { AiAgent_Plain } from '../../../ai-agent/content-types/ai-agent/ai-agent';
 import { AdminPanelRelationPropertyModification } from '../../../../common/schemas/AdminPanelRelationPropertyModification';
 
 export interface Tag {
@@ -16,6 +18,7 @@ export interface Tag {
     feature?: { data: Feature };
     color?: any;
     icon?: any;
+    ai_agent?: { data: AiAgent };
   };
 }
 export interface Tag_Plain {
@@ -27,6 +30,7 @@ export interface Tag_Plain {
   feature?: Feature_Plain;
   color?: any;
   icon?: any;
+  ai_agent?: AiAgent_Plain;
 }
 
 export interface Tag_NoRelations {
@@ -38,6 +42,7 @@ export interface Tag_NoRelations {
   feature?: number;
   color?: any;
   icon?: any;
+  ai_agent?: number;
 }
 
 export interface Tag_AdminPanelLifeCycle {
@@ -49,4 +54,5 @@ export interface Tag_AdminPanelLifeCycle {
   feature?: AdminPanelRelationPropertyModification<Feature_Plain>;
   color?: any;
   icon?: any;
+  ai_agent?: AdminPanelRelationPropertyModification<AiAgent_Plain>;
 }

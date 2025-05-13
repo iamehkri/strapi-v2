@@ -51,6 +51,12 @@
         "output": "name"
       },
       "customField": "plugin::icons-field.icon"
+    },
+    "ai_agent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ai-agent.ai-agent",
+      "inversedBy": "tags"
     }
   }
 }

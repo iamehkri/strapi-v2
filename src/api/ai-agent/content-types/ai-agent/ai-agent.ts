@@ -8,6 +8,7 @@ import { PriceBox } from '../../../../components/shared/interfaces/PriceBox';
 import { Media } from '../../../../common/schemas/Media';
 import { CaseStudy } from '../../../case-study/content-types/case-study/case-study';
 import { NextjsComp } from '../../../../components/shared/interfaces/NextjsComp';
+import { Tag } from '../../../tag/content-types/tag/tag';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
@@ -16,6 +17,7 @@ import { PriceBox_Plain } from '../../../../components/shared/interfaces/PriceBo
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { CaseStudy_Plain } from '../../../case-study/content-types/case-study/case-study';
 import { NextjsComp_Plain } from '../../../../components/shared/interfaces/NextjsComp';
+import { Tag_Plain } from '../../../tag/content-types/tag/tag';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
@@ -41,6 +43,7 @@ export interface AiAgent {
     relateCaseStudies?: { data: CaseStudy[] };
     nextjs?: NextjsComp;
     slug?: string;
+    tags: { data: Tag[] };
   };
 }
 export interface AiAgent_Plain {
@@ -59,6 +62,7 @@ export interface AiAgent_Plain {
   relateCaseStudies?: CaseStudy_Plain[];
   nextjs?: NextjsComp_Plain;
   slug?: string;
+  tags: Tag_Plain[];
 }
 
 export interface AiAgent_NoRelations {
@@ -77,6 +81,7 @@ export interface AiAgent_NoRelations {
   relateCaseStudies?: number[];
   nextjs?: NextjsComp_NoRelations;
   slug?: string;
+  tags: number[];
 }
 
 export interface AiAgent_AdminPanelLifeCycle {
@@ -95,4 +100,5 @@ export interface AiAgent_AdminPanelLifeCycle {
   relateCaseStudies?: AdminPanelRelationPropertyModification<CaseStudy_Plain>;
   nextjs?: NextjsComp_Plain;
   slug?: string;
+  tags: AdminPanelRelationPropertyModification<Tag_Plain>;
 }
