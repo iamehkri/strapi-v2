@@ -19,13 +19,6 @@
     "subFeatureExcerpt": {
       "type": "text"
     },
-    "subFeatureIcon": {
-      "type": "customField",
-      "options": {
-        "output": "svg"
-      },
-      "customField": "plugin::icons-field.icon"
-    },
     "features": {
       "type": "relation",
       "relation": "manyToMany",

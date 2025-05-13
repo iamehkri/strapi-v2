@@ -89,13 +89,6 @@
       "relation": "manyToMany",
       "target": "api::article.article",
       "mappedBy": "features"
-    },
-    "featureIcon": {
-      "type": "customField",
-      "options": {
-        "output": "svg"
-      },
-      "customField": "plugin::icons-field.icon"
     }
   }
 }

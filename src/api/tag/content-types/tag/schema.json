@@ -45,13 +45,6 @@
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
       "customField": "plugin::color-picker.color"
     },
-    "icon": {
-      "type": "customField",
-      "options": {
-        "output": "name"
-      },
-      "customField": "plugin::icons-field.icon"
-    },
     "ai_agent": {
       "type": "relation",
       "relation": "manyToOne",
