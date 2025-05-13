@@ -9,6 +9,7 @@ import { Media } from '../../../../common/schemas/Media';
 import { CaseStudy } from '../../../case-study/content-types/case-study/case-study';
 import { NextjsComp } from '../../../../components/shared/interfaces/NextjsComp';
 import { Tag } from '../../../tag/content-types/tag/tag';
+import { Industry } from '../../../industry/content-types/industry/industry';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_Plain } from '../../../../components/shared/interfaces/Seo';
 import { Faq_Plain } from '../../../../components/shared/interfaces/Faq';
@@ -18,6 +19,7 @@ import { Media_Plain } from '../../../../common/schemas/Media';
 import { CaseStudy_Plain } from '../../../case-study/content-types/case-study/case-study';
 import { NextjsComp_Plain } from '../../../../components/shared/interfaces/NextjsComp';
 import { Tag_Plain } from '../../../tag/content-types/tag/tag';
+import { Industry_Plain } from '../../../industry/content-types/industry/industry';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
 import { Faq_NoRelations } from '../../../../components/shared/interfaces/Faq';
@@ -44,6 +46,7 @@ export interface AiAgent {
     nextjs?: NextjsComp;
     slug?: string;
     tags: { data: Tag[] };
+    industry?: { data: Industry };
   };
 }
 export interface AiAgent_Plain {
@@ -63,6 +66,7 @@ export interface AiAgent_Plain {
   nextjs?: NextjsComp_Plain;
   slug?: string;
   tags: Tag_Plain[];
+  industry?: Industry_Plain;
 }
 
 export interface AiAgent_NoRelations {
@@ -82,6 +86,7 @@ export interface AiAgent_NoRelations {
   nextjs?: NextjsComp_NoRelations;
   slug?: string;
   tags: number[];
+  industry?: number;
 }
 
 export interface AiAgent_AdminPanelLifeCycle {
@@ -101,4 +106,5 @@ export interface AiAgent_AdminPanelLifeCycle {
   nextjs?: NextjsComp_Plain;
   slug?: string;
   tags: AdminPanelRelationPropertyModification<Tag_Plain>;
+  industry?: AdminPanelRelationPropertyModification<Industry_Plain>;
 }

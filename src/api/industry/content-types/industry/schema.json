@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industries",
+  "info": {
+    "singularName": "industry",
+    "pluralName": "industries",
+    "displayName": "Industry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "industryIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.icon-box"
+    },
+    "agents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ai-agent.ai-agent",
+      "mappedBy": "industry"
+    },
+    "case_studies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "inversedBy": "industries"
+    },
+    "iconBox": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.icon-box"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.faq"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "use_cases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::use-case.use-case",
+      "mappedBy": "industries"
+    }
+  }
+}

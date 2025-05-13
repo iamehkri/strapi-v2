@@ -8,6 +8,7 @@ import { AiAgent } from '../../../ai-agent/content-types/ai-agent/ai-agent';
 import { Feature } from '../../../feature/content-types/feature/feature';
 import { Integration } from '../../../integration/content-types/integration/integration';
 import { NextjsComp } from '../../../../components/shared/interfaces/NextjsComp';
+import { Industry } from '../../../industry/content-types/industry/industry';
 import { Media_Plain } from '../../../../common/schemas/Media';
 import { IconBox_Plain } from '../../../../components/shared/interfaces/IconBox';
 import { StatBox_Plain } from '../../../../components/shared/interfaces/StatBox';
@@ -16,6 +17,7 @@ import { AiAgent_Plain } from '../../../ai-agent/content-types/ai-agent/ai-agent
 import { Feature_Plain } from '../../../feature/content-types/feature/feature';
 import { Integration_Plain } from '../../../integration/content-types/integration/integration';
 import { NextjsComp_Plain } from '../../../../components/shared/interfaces/NextjsComp';
+import { Industry_Plain } from '../../../industry/content-types/industry/industry';
 import { IconBox_NoRelations } from '../../../../components/shared/interfaces/IconBox';
 import { StatBox_NoRelations } from '../../../../components/shared/interfaces/StatBox';
 import { Seo_NoRelations } from '../../../../components/shared/interfaces/Seo';
@@ -41,6 +43,7 @@ export interface CaseStudy {
     relateIntegrations?: { data: Integration[] };
     gallery?: { data: Media[] };
     nextjs?: NextjsComp;
+    industries?: { data: Industry[] };
   };
 }
 export interface CaseStudy_Plain {
@@ -61,6 +64,7 @@ export interface CaseStudy_Plain {
   relateIntegrations?: Integration_Plain[];
   gallery?: Media_Plain[];
   nextjs?: NextjsComp_Plain;
+  industries?: Industry_Plain[];
 }
 
 export interface CaseStudy_NoRelations {
@@ -81,6 +85,7 @@ export interface CaseStudy_NoRelations {
   relateIntegrations?: number[];
   gallery?: number[];
   nextjs?: NextjsComp_NoRelations;
+  industries?: number[];
 }
 
 export interface CaseStudy_AdminPanelLifeCycle {
@@ -101,4 +106,5 @@ export interface CaseStudy_AdminPanelLifeCycle {
   relateIntegrations?: AdminPanelRelationPropertyModification<Integration_Plain>;
   gallery?: AdminPanelRelationPropertyModification<Media_Plain>[];
   nextjs?: NextjsComp_Plain;
+  industries?: AdminPanelRelationPropertyModification<Industry_Plain>;
 }

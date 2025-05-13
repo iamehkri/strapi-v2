@@ -92,6 +92,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.nextjs-comp"
+    },
+    "industries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::industry.industry",
+      "mappedBy": "case_studies"
     }
   }
 }

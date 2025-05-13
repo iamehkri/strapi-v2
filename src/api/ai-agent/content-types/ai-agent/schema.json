@@ -81,6 +81,12 @@
       "relation": "oneToMany",
       "target": "api::tag.tag",
       "mappedBy": "ai_agent"
+    },
+    "industry": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::industry.industry",
+      "inversedBy": "agents"
     }
   }
 }

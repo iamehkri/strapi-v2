@@ -394,6 +394,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     faq: Schema.Attribute.Component<'shared.faq', true>;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    industry: Schema.Attribute.Relation<'manyToOne', 'api::industry.industry'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -420,7 +421,8 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
-    displayName: 'article';
+    description: '';
+    displayName: 'Help Article';
     pluralName: 'articles';
     singularName: 'article';
   };
@@ -580,6 +582,10 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    industries: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::industry.industry'
+    >;
     introText: Schema.Attribute.RichText;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -668,6 +674,50 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
+  collectionName: 'industries';
+  info: {
+    displayName: 'Industry';
+    pluralName: 'industries';
+    singularName: 'industry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    agents: Schema.Attribute.Relation<'oneToMany', 'api::ai-agent.ai-agent'>;
+    case_studies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::case-study.case-study'
+    >;
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    excerpt: Schema.Attribute.Text;
+    faq: Schema.Attribute.Component<'shared.faq', true>;
+    iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    industryIcon: Schema.Attribute.Component<'shared.icon-box', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::industry.industry'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', true>;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    use_cases: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::use-case.use-case'
+    >;
   };
 }
 
@@ -871,6 +921,49 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
+  collectionName: 'use_cases';
+  info: {
+    displayName: 'Use Case';
+    pluralName: 'use-cases';
+    singularName: 'use-case';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    excerpt: Schema.Attribute.Text;
+    faq: Schema.Attribute.Component<'shared.faq', true>;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    industries: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::industry.industry'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::use-case.use-case'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    useCaseIcon: Schema.Attribute.Component<'shared.icon-box', false>;
   };
 }
 
@@ -1389,11 +1482,13 @@ declare module '@strapi/strapi' {
       'api::career.career': ApiCareerCareer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::feature.feature': ApiFeatureFeature;
+      'api::industry.industry': ApiIndustryIndustry;
       'api::integration.integration': ApiIntegrationIntegration;
       'api::press.press': ApiPressPress;
       'api::subfeature.subfeature': ApiSubfeatureSubfeature;
       'api::tag.tag': ApiTagTag;
       'api::team.team': ApiTeamTeam;
+      'api::use-case.use-case': ApiUseCaseUseCase;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
