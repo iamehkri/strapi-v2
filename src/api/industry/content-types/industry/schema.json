@@ -30,7 +30,7 @@
       "target": "api::ai-agent.ai-agent",
       "mappedBy": "industry"
     },
-    "case_studies": {
+    "caseStudies": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::case-study.case-study",
@@ -1053,6 +1053,14 @@
         "yobi-yobi_weather_wind",
         "yobi-yobi_weather_wind-2"
       ]
+    },
+    "content2": {
+      "type": "richtext"
+    },
+    "nextJS": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nextjs-comp"
     }
   }
 }

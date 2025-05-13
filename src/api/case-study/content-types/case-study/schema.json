@@ -34,21 +34,21 @@
         "audios"
       ]
     },
-    "introText": {
+    "content": {
       "type": "richtext"
     },
-    "bodyText": {
+    "content2": {
       "type": "richtext"
     },
-    "concText": {
+    "content3": {
       "type": "richtext"
     },
-    "caseIconbox": {
+    "iconBox": {
       "type": "component",
       "repeatable": true,
       "component": "shared.icon-box"
     },
-    "caseStats": {
+    "stats": {
       "type": "component",
       "repeatable": true,
       "component": "shared.stat-box"
@@ -58,23 +58,17 @@
       "repeatable": false,
       "component": "shared.seo"
     },
-    "relateAgents": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::ai-agent.ai-agent",
-      "inversedBy": "relateCaseStudies"
-    },
-    "relateFeature": {
+    "feature": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::feature.feature",
-      "inversedBy": "relateCaseStudy"
+      "inversedBy": "caseStudy"
     },
-    "relateIntegrations": {
+    "integrations": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::integration.integration",
-      "inversedBy": "relateCaseStudy"
+      "inversedBy": "caseStudy"
     },
     "gallery": {
       "type": "media",
@@ -92,11 +86,40 @@
       "repeatable": false,
       "component": "shared.nextjs-comp"
     },
+    "agents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ai-agent.ai-agent",
+      "mappedBy": "caseStudes"
+    },
+    "contentquote": {
+      "type": "richtext"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "layoutStyle": {
+      "type": "enumeration",
+      "enum": [
+        "image",
+        "gallery",
+        "video",
+        "multiple"
+      ]
+    },
     "industries": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::industry.industry",
-      "mappedBy": "case_studies"
+      "mappedBy": "caseStudies"
     }
   }
 }

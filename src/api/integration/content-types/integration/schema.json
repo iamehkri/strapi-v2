@@ -22,7 +22,7 @@
       "repeatable": false,
       "component": "shared.seo"
     },
-    "integrationVideo": {
+    "video": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -38,14 +38,8 @@
       "repeatable": true,
       "component": "shared.faq"
     },
-    "integrationDescription": {
+    "content": {
       "type": "richtext"
-    },
-    "relateCaseStudy": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::case-study.case-study",
-      "mappedBy": "relateIntegrations"
     },
     "gallery": {
       "type": "media",
@@ -79,6 +73,15 @@
       "relation": "manyToMany",
       "target": "api::article.article",
       "mappedBy": "integrations"
+    },
+    "caseStudy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "integrations"
+    },
+    "content2": {
+      "type": "richtext"
     }
   }
 }

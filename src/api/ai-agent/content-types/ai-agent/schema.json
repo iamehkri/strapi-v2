@@ -14,10 +14,10 @@
     "title": {
       "type": "string"
     },
-    "agentSegment": {
+    "segment": {
       "type": "string"
     },
-    "agentBlurb": {
+    "excerpt": {
       "type": "text"
     },
     "iconBox": {
@@ -45,10 +45,10 @@
       "repeatable": true,
       "component": "shared.price-box"
     },
-    "agentBlurb2": {
+    "textArea1": {
       "type": "text"
     },
-    "agentBlurb3": {
+    "textArea2": {
       "type": "text"
     },
     "featuredImage": {
@@ -62,11 +62,11 @@
         "audios"
       ]
     },
-    "relateCaseStudies": {
+    "caseStudes": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::case-study.case-study",
-      "mappedBy": "relateAgents"
+      "inversedBy": "agents"
     },
     "nextjs": {
       "type": "component",
@@ -87,6 +87,9 @@
       "relation": "manyToOne",
       "target": "api::industry.industry",
       "inversedBy": "agents"
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }

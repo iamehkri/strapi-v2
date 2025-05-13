@@ -36,7 +36,7 @@
       "target": "api::integration.integration",
       "inversedBy": "articles"
     },
-    "screenshots": {
+    "gallery": {
       "type": "media",
       "multiple": true,
       "required": false,

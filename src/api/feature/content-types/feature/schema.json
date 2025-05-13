@@ -23,7 +23,7 @@
       "target": "api::tag.tag",
       "mappedBy": "feature"
     },
-    "featureBox": {
+    "iconBox": {
       "type": "component",
       "repeatable": true,
       "component": "shared.icon-box"
@@ -49,10 +49,10 @@
       "repeatable": true,
       "component": "shared.faq"
     },
-    "featureDetails": {
+    "content": {
       "type": "richtext"
     },
-    "featureBlurb": {
+    "excerpt": {
       "type": "text"
     },
     "subfeatures": {
@@ -60,12 +60,6 @@
       "relation": "manyToMany",
       "target": "api::subfeature.subfeature",
       "inversedBy": "features"
-    },
-    "relateCaseStudy": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::case-study.case-study",
-      "mappedBy": "relateFeature"
     },
     "gallery": {
       "type": "media",
@@ -1085,6 +1079,15 @@
         "yobi-yobi_weather_wind",
         "yobi-yobi_weather_wind-2"
       ]
+    },
+    "caseStudy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "feature"
+    },
+    "content2": {
+      "type": "richtext"
     }
   }
 }

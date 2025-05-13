@@ -17,10 +17,10 @@
     "slug": {
       "type": "uid"
     },
-    "blogExcerpt": {
+    "excerpt": {
       "type": "text"
     },
-    "blogContent": {
+    "content": {
       "type": "richtext"
     },
     "tags": {
@@ -40,7 +40,7 @@
         "audios"
       ]
     },
-    "blogSEO": {
+    "seo": {
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
