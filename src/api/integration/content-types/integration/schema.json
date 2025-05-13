@@ -11,12 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "integrationTitle": {
+    "title": {
       "type": "string"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "integrationTitle"
+      "type": "uid"
     },
     "seo": {
       "type": "component",
@@ -59,7 +58,7 @@
         "audios"
       ]
     },
-    "integrationIcon": {
+    "featuredImage": {
       "type": "media",
       "multiple": false,
       "required": false,

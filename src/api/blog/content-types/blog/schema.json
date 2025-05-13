@@ -11,12 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "blogTitle": {
+    "title": {
       "type": "string"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "blogTitle"
+      "type": "uid"
     },
     "blogExcerpt": {
       "type": "text"

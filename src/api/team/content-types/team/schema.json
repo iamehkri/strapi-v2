@@ -23,7 +23,7 @@
     "instagram": {
       "type": "string"
     },
-    "image": {
+    "featuredImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -37,7 +37,7 @@
     "bio": {
       "type": "text"
     },
-    "teamid": {
+    "slug": {
       "type": "uid",
       "targetField": "name"
     }

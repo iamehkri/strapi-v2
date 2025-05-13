@@ -11,15 +11,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
     "excerpt": {
       "type": "text"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "Title"
+      "type": "uid"
     },
     "pubDate": {
       "type": "date"

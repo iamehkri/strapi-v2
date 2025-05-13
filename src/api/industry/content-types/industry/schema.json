@@ -57,7 +57,7 @@
       "target": "api::use-case.use-case",
       "mappedBy": "industries"
     },
-    "icon": {
+    "featuredIcon": {
       "type": "enumeration",
       "enum": [
         "yobi-yobi_a_space",
