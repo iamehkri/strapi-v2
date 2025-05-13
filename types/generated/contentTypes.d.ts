@@ -411,6 +411,10 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID;
     stats: Schema.Attribute.Component<'shared.stat-box', true>;
     tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    testimonials: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::testimonial.testimonial'
+    >;
     textArea1: Schema.Attribute.Text;
     textArea2: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -1607,6 +1611,10 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID;
     stats: Schema.Attribute.Component<'shared.stat-box', true>;
+    testimonials: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::testimonial.testimonial'
+    >;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -4899,6 +4907,45 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
+  collectionName: 'testimonials';
+  info: {
+    displayName: 'Testimonial';
+    pluralName: 'testimonials';
+    singularName: 'testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ai_agents: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ai-agent.ai-agent'
+    >;
+    case_studies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::case-study.case-study'
+    >;
+    company: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    excerpt: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::testimonial.testimonial'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
   collectionName: 'use_cases';
   info: {
@@ -6460,6 +6507,7 @@ declare module '@strapi/strapi' {
       'api::subfeature.subfeature': ApiSubfeatureSubfeature;
       'api::tag.tag': ApiTagTag;
       'api::team.team': ApiTeamTeam;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::use-case.use-case': ApiUseCaseUseCase;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

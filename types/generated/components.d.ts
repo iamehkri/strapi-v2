@@ -1072,17 +1072,22 @@ export interface SharedOpenGraph extends Struct.ComponentSchema {
 export interface SharedPriceBox extends Struct.ComponentSchema {
   collectionName: 'components_shared_price_boxes';
   info: {
+    description: '';
     displayName: 'priceBox';
     icon: 'hashtag';
   };
   attributes: {
     cost: Schema.Attribute.Integer;
+    description: Schema.Attribute.Text;
     frequency: Schema.Attribute.Enumeration<['monthly', 'annual', 'one-time']>;
     point1: Schema.Attribute.String;
     point2: Schema.Attribute.String;
     point3: Schema.Attribute.String;
     point4: Schema.Attribute.String;
     point5: Schema.Attribute.String;
+    setupfee: Schema.Attribute.Boolean;
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
