@@ -395,6 +395,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     industry: Schema.Attribute.Relation<'manyToOne', 'api::industry.industry'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1582,6 +1583,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       true
     >;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     industries: Schema.Attribute.Relation<
       'manyToMany',
       'api::industry.industry'
@@ -2641,6 +2643,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
       true
     >;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -3684,6 +3687,7 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
       ]
     >;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -3735,6 +3739,7 @@ export interface ApiIntegrationIntegration extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -5913,6 +5918,7 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
       true
     >;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
+    imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     industries: Schema.Attribute.Relation<
       'manyToMany',
       'api::industry.industry'

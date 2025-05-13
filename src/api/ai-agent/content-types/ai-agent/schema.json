@@ -90,6 +90,11 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "imageCaption": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image-caption"
     }
   }
 }

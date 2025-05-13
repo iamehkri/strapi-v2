@@ -1061,6 +1061,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.nextjs-comp"
+    },
+    "imageCaption": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image-caption"
     }
   }
 }

@@ -1052,6 +1052,11 @@
         "yobi-yobi_weather_wind",
         "yobi-yobi_weather_wind-2"
       ]
+    },
+    "imageCaption": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image-caption"
     }
   }
 }

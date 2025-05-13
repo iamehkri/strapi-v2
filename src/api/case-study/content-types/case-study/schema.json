@@ -120,6 +120,11 @@
       "relation": "manyToMany",
       "target": "api::industry.industry",
       "mappedBy": "caseStudies"
+    },
+    "imageCaption": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image-caption"
     }
   }
 }
