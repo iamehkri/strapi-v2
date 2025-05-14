@@ -2643,7 +2643,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
         'yobi_weather_wind-2',
       ]
     >;
-    featureMedia: Schema.Attribute.Media<
+    featureVideo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
     gallery: Schema.Attribute.Media<
@@ -2666,6 +2666,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::subfeature.subfeature'
     >;
+    tagline: Schema.Attribute.String;
     tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

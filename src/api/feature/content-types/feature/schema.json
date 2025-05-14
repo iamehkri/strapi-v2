@@ -33,7 +33,7 @@
       "repeatable": false,
       "component": "shared.seo"
     },
-    "featureMedia": {
+    "featureVideo": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -1093,6 +1093,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.image-caption"
+    },
+    "tagline": {
+      "type": "string"
     }
   }
 }
