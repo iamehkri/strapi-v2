@@ -3707,6 +3707,10 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', true>;
     slug: Schema.Attribute.UID<'title'>;
+    testimonials: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::testimonial.testimonial'
+    >;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -5907,6 +5911,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
 export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
   collectionName: 'testimonials';
   info: {
+    description: '';
     displayName: 'Testimonial';
     pluralName: 'testimonials';
     singularName: 'testimonial';
@@ -5928,6 +5933,10 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     excerpt: Schema.Attribute.Text;
+    industries: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::industry.industry'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

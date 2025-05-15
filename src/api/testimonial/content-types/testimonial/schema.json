@@ -4,7 +4,8 @@
   "info": {
     "singularName": "testimonial",
     "pluralName": "testimonials",
-    "displayName": "Testimonial"
+    "displayName": "Testimonial",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,6 +34,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::case-study.case-study",
+      "inversedBy": "testimonials"
+    },
+    "industries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::industry.industry",
       "inversedBy": "testimonials"
     }
   }

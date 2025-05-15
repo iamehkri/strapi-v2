@@ -1024,12 +1024,14 @@ export interface SharedIconBox extends Struct.ComponentSchema {
 export interface SharedImageCaption extends Struct.ComponentSchema {
   collectionName: 'components_shared_image_captions';
   info: {
+    description: '';
     displayName: 'ImageCaption';
     icon: 'landscape';
   };
   attributes: {
-    caption: Schema.Attribute.String;
+    content: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
