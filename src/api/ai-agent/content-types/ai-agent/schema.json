@@ -76,12 +76,6 @@
     "slug": {
       "type": "uid"
     },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag",
-      "mappedBy": "ai_agent"
-    },
     "industry": {
       "type": "relation",
       "relation": "manyToOne",
@@ -101,6 +95,18 @@
       "relation": "manyToMany",
       "target": "api::testimonial.testimonial",
       "mappedBy": "ai_agents"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "ai_agents"
+    },
+    "use_cases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::use-case.use-case",
+      "inversedBy": "ai_agents"
     }
   }
 }

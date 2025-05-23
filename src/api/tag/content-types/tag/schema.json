@@ -28,15 +28,9 @@
       "type": "text",
       "maxLength": 200
     },
-    "blog": {
+    "features": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::blog.blog",
-      "inversedBy": "tags"
-    },
-    "feature": {
-      "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::feature.feature",
       "inversedBy": "tags"
     },
@@ -45,9 +39,9 @@
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
       "customField": "plugin::color-picker.color"
     },
-    "ai_agent": {
+    "ai_agents": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::ai-agent.ai-agent",
       "inversedBy": "tags"
     },
@@ -1047,6 +1041,12 @@
         "yobi_weather_wind,",
         "yobi_weather_wind-2"
       ]
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog.blog",
+      "inversedBy": "tags"
     }
   }
 }

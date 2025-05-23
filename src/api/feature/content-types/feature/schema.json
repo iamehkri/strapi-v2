@@ -17,12 +17,6 @@
     "slug": {
       "type": "uid"
     },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag",
-      "mappedBy": "feature"
-    },
     "iconBox": {
       "type": "component",
       "repeatable": true,
@@ -1096,6 +1090,12 @@
     },
     "tagline": {
       "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "features"
     }
   }
 }

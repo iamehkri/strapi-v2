@@ -34,6 +34,10 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
         minLength: 1;
       }> &
       Schema.Attribute.DefaultTo<''>;
+    encryptedKey: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 1;
+      }>;
     expiresAt: Schema.Attribute.DateTime;
     lastUsedAt: Schema.Attribute.DateTime;
     lifespan: Schema.Attribute.BigInteger;
@@ -410,7 +414,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID;
     stats: Schema.Attribute.Component<'shared.stat-box', true>;
-    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     testimonials: Schema.Attribute.Relation<
       'manyToMany',
       'api::testimonial.testimonial'
@@ -421,6 +425,10 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    use_cases: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::use-case.use-case'
+    >;
   };
 }
 
@@ -500,7 +508,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID;
-    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -2667,7 +2675,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
       'api::subfeature.subfeature'
     >;
     tagline: Schema.Attribute.String;
-    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -4846,8 +4854,11 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    ai_agent: Schema.Attribute.Relation<'manyToOne', 'api::ai-agent.ai-agent'>;
-    blog: Schema.Attribute.Relation<'manyToOne', 'api::blog.blog'>;
+    ai_agents: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ai-agent.ai-agent'
+    >;
+    blogs: Schema.Attribute.Relation<'manyToMany', 'api::blog.blog'>;
     color: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     createdAt: Schema.Attribute.DateTime;
@@ -4857,7 +4868,7 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 200;
       }>;
-    feature: Schema.Attribute.Relation<'manyToOne', 'api::feature.feature'>;
+    features: Schema.Attribute.Relation<'manyToMany', 'api::feature.feature'>;
     icon: Schema.Attribute.Enumeration<
       [
         'yobi_a_space,',
@@ -5964,6 +5975,10 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    ai_agents: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ai-agent.ai-agent'
+    >;
     content: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

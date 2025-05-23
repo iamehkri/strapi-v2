@@ -1057,6 +1057,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.image-caption"
+    },
+    "ai_agents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ai-agent.ai-agent",
+      "mappedBy": "use_cases"
     }
   }
 }
