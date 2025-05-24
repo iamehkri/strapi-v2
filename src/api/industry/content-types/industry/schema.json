@@ -1072,6 +1072,11 @@
       "relation": "manyToMany",
       "target": "api::testimonial.testimonial",
       "mappedBy": "industries"
+    },
+    "heroMedia": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.image-caption"
     }
   }
 }
