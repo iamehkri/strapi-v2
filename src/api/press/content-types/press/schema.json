@@ -36,6 +36,9 @@
     },
     "pubDate": {
       "type": "date"
+    },
+    "featured": {
+      "type": "boolean"
     }
   }
 }
