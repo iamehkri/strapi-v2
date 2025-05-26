@@ -385,6 +385,8 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    cardColor: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     caseStudes: Schema.Attribute.Relation<
       'manyToMany',
       'api::case-study.case-study'
