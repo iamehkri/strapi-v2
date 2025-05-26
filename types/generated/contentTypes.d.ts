@@ -3807,6 +3807,7 @@ export interface ApiPressPress extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::press.press'> &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     pressContent: Schema.Attribute.Text;
     pressID: Schema.Attribute.UID;
     pubDate: Schema.Attribute.Date;
