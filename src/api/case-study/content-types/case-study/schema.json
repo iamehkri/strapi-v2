@@ -133,9 +133,10 @@
       "mappedBy": "case_studies"
     },
     "heroMedia": {
+      "displayName": "hero_media",
       "type": "component",
       "repeatable": false,
-      "component": "shared.image-caption"
+      "component": "single.hero-media"
     }
   }
 }

@@ -1132,6 +1132,19 @@ export interface SharedStatBox extends Struct.ComponentSchema {
   };
 }
 
+export interface SingleHeroMedia extends Struct.ComponentSchema {
+  collectionName: 'components_single_hero_medias';
+  info: {
+    displayName: 'hero_media';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -1143,6 +1156,7 @@ declare module '@strapi/strapi' {
       'shared.price-box': SharedPriceBox;
       'shared.seo': SharedSeo;
       'shared.stat-box': SharedStatBox;
+      'single.hero-media': SingleHeroMedia;
     }
   }
 }

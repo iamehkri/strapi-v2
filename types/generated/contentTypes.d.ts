@@ -1596,7 +1596,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    heroMedia: Schema.Attribute.Component<'shared.image-caption', false>;
+    heroMedia: Schema.Attribute.Component<'single.hero-media', false>;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
     imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     industries: Schema.Attribute.Relation<
@@ -6987,6 +6987,9 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
         'yobi_weather_wind',
         'yobi_weather_wind-2',
       ]
+    >;
+    featuredImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     >;
     gallery: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',

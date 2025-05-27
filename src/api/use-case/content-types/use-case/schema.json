@@ -1063,6 +1063,16 @@
       "relation": "manyToMany",
       "target": "api::ai-agent.ai-agent",
       "mappedBy": "use_cases"
+    },
+    "featuredImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
