@@ -1638,7 +1638,7 @@ export interface ApiFeatureFeature extends Struct.CollectionTypeSchema {
   collectionName: 'features';
   info: {
     description: '';
-    displayName: 'Feature';
+    displayName: 'Product';
     pluralName: 'features';
     singularName: 'feature';
   };
@@ -3823,7 +3823,7 @@ export interface ApiSubfeatureSubfeature extends Struct.CollectionTypeSchema {
   collectionName: 'subfeatures';
   info: {
     description: '';
-    displayName: 'Subfeature';
+    displayName: 'Features';
     pluralName: 'subfeatures';
     singularName: 'subfeature';
   };
