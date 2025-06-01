@@ -393,6 +393,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     >;
     characteristic: Schema.Attribute.Component<'single.characteristic', true>;
     content: Schema.Attribute.RichText;
+    content2: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

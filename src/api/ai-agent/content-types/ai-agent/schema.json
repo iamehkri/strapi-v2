@@ -132,6 +132,9 @@
       "type": "component",
       "repeatable": true,
       "component": "single.characteristic"
+    },
+    "content2": {
+      "type": "richtext"
     }
   }
 }
