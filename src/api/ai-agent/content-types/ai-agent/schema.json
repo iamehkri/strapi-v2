@@ -123,6 +123,15 @@
       "relation": "manyToMany",
       "target": "api::integration.integration",
       "inversedBy": "ai_agents"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "characteristic": {
+      "displayName": "characteristic",
+      "type": "component",
+      "repeatable": true,
+      "component": "single.characteristic"
     }
   }
 }

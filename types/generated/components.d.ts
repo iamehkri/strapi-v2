@@ -2130,6 +2130,15 @@ export interface SharedStatBox extends Struct.ComponentSchema {
   };
 }
 
+export interface SingleCharacteristic extends Struct.ComponentSchema {
+  collectionName: 'components_single_characteristics';
+  info: {
+    displayName: 'characteristic';
+    icon: 'apps';
+  };
+  attributes: {};
+}
+
 export interface SingleHeroMedia extends Struct.ComponentSchema {
   collectionName: 'components_single_hero_medias';
   info: {
@@ -2154,6 +2163,7 @@ declare module '@strapi/strapi' {
       'shared.price-box': SharedPriceBox;
       'shared.seo': SharedSeo;
       'shared.stat-box': SharedStatBox;
+      'single.characteristic': SingleCharacteristic;
       'single.hero-media': SingleHeroMedia;
     }
   }

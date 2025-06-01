@@ -391,6 +391,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::case-study.case-study'
     >;
+    characteristic: Schema.Attribute.Component<'single.characteristic', true>;
     content: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -417,6 +418,7 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     nextjs: Schema.Attribute.Component<'shared.nextjs-comp', false>;
     priceBox: Schema.Attribute.Component<'shared.price-box', true>;
     publishedAt: Schema.Attribute.DateTime;
+    quote: Schema.Attribute.Text;
     segment: Schema.Attribute.String;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID;
