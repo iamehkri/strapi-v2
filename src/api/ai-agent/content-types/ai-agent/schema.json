@@ -112,6 +112,17 @@
       "type": "customField",
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
       "customField": "plugin::color-picker.color"
+    },
+    "heroMedia": {
+      "type": "component",
+      "repeatable": false,
+      "component": "single.hero-media"
+    },
+    "integrations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::integration.integration",
+      "inversedBy": "ai_agents"
     }
   }
 }

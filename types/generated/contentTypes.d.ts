@@ -400,9 +400,14 @@ export interface ApiAiAgentAiAgent extends Struct.CollectionTypeSchema {
     featuredImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    heroMedia: Schema.Attribute.Component<'single.hero-media', false>;
     iconBox: Schema.Attribute.Component<'shared.icon-box', true>;
     imageCaption: Schema.Attribute.Component<'shared.image-caption', true>;
     industry: Schema.Attribute.Relation<'manyToOne', 'api::industry.industry'>;
+    integrations: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::integration.integration'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -3747,6 +3752,10 @@ export interface ApiIntegrationIntegration extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    ai_agents: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ai-agent.ai-agent'
+    >;
     articles: Schema.Attribute.Relation<'manyToMany', 'api::article.article'>;
     caseStudy: Schema.Attribute.Relation<
       'manyToMany',
