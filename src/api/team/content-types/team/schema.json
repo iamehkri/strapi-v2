@@ -40,6 +40,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "title": {
+      "type": "string"
+    },
+    "advisor": {
+      "type": "boolean"
     }
   }
 }
