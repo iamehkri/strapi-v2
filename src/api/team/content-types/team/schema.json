@@ -17,9 +17,6 @@
     "linkedin": {
       "type": "string"
     },
-    "facebook": {
-      "type": "string"
-    },
     "instagram": {
       "type": "string"
     },
@@ -46,6 +43,12 @@
     },
     "advisor": {
       "type": "boolean"
+    },
+    "website": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
     }
   }
 }

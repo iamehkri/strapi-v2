@@ -1,0 +1,695 @@
+{
+	"version": 2,
+	"data": {
+		"api::tag.tag": {
+			"6": {
+				"id": 6,
+				"documentId": "vcphlbik2yrjthpcp4yv0tlh",
+				"name": "AI",
+				"slug": "ai",
+				"description": "Insights into artificial intelligence technologies and their applications in business.",
+				"color": "#587BDF"
+			},
+			"7": {
+				"id": 7,
+				"documentId": "p4uogzvzmc0zatpu5n2b28ss",
+				"name": "AI Employees",
+				"slug": "ai-employees",
+				"description": "Artificial intelligence-powered digital workers that handle tasks across sales, support, operations, and more.",
+				"color": "#587BDF"
+			},
+			"8": {
+				"id": 8,
+				"documentId": "idn8x4br87ripn1x3vvrezx2",
+				"name": "AI Assistant",
+				"slug": "ai-assistant",
+				"description": "Intelligent virtual assistants that support individuals and teams with productivity, communication, and automation.",
+				"color": "#587BDF"
+			},
+			"9": {
+				"id": 9,
+				"documentId": "z5g9i7bo89tt69x2jpdu2cc4",
+				"name": "AI Agent",
+				"slug": "ai-agent",
+				"description": "Autonomous AI-powered software that completes tasks, manages workflows, and interacts with users or systems.",
+				"color": "#587BDF"
+			},
+			"10": {
+				"id": 10,
+				"documentId": "p9ms7lwbcvk5hiwmd5zudaad",
+				"name": "Reflective AI",
+				"slug": "reflective-ai",
+				"description": "AI systems capable of adjusting and optimizing their outputs through self-assessment and contextual awareness.",
+				"color": "#587BDF"
+			},
+			"11": {
+				"id": 11,
+				"documentId": "k9dslt4x4icac9exyxmqfa9s",
+				"name": "Goal-Oriented AI",
+				"slug": "goal-oriented-ai",
+				"description": "AI models trained to achieve specific business outcomes through guided, structured dialogue and actions.",
+				"color": "#587BDF"
+			},
+			"12": {
+				"id": 12,
+				"documentId": "wtsyuw4rhfypi6bpubnrgfd3",
+				"name": "Cognitive Automation",
+				"slug": "cognitive-automation",
+				"description": "Advanced automation that mimics human thought processes to handle complex decision-making and workflows.",
+				"color": "#587BDF"
+			},
+			"13": {
+				"id": 13,
+				"documentId": "x6pptv8qp3zvu8k50jqpd8p9",
+				"name": "Prompt Engineering",
+				"slug": "prompt-engineering",
+				"description": "Techniques for crafting effective prompts to guide large language models and improve AI output.",
+				"color": "#587BDF"
+			},
+			"14": {
+				"id": 14,
+				"documentId": "v5ixg097buucx45rb368bday",
+				"name": "AI for Sales",
+				"slug": "ai-for-sales",
+				"description": "Tools and agents that assist sales teams in outreach, lead qualification, and pipeline optimization.",
+				"color": "#587BDF"
+			},
+			"15": {
+				"id": 15,
+				"documentId": "kzvvasbbwxi76uldlbu0pzjf",
+				"name": "AI for Support",
+				"slug": "ai-for-support",
+				"description": "AI agents that improve customer support resolution time, reduce costs, and enhance customer satisfaction.",
+				"color": "#587BDF"
+			},
+			"16": {
+				"id": 16,
+				"documentId": "apju0jvnm0yq8iymfyno15k2",
+				"name": "AI for Operations",
+				"slug": "ai-for-operations",
+				"description": "AI systems that streamline internal processes, workflows, and data-driven decisions across departments.",
+				"color": "#587BDF"
+			},
+			"17": {
+				"id": 17,
+				"documentId": "ezt01citvtkzjlby2ymzl3rj",
+				"name": "AI for SMBs",
+				"slug": "ai-for-smbs",
+				"description": "Affordable and scalable AI tools designed to empower small and medium-sized businesses.",
+				"color": "#587BDF"
+			},
+			"18": {
+				"id": 18,
+				"documentId": "vv7wnb54cmu97hioh6x8dzx0",
+				"name": "Conversational AI",
+				"slug": "conversational-ai",
+				"description": "Insights into the development and implementation of conversational AI technologies, including chatbots and virtual assistants.",
+				"color": "#587BDF"
+			},
+			"19": {
+				"id": 19,
+				"documentId": "oq8eze2xogtoxq9qknf7c4ef",
+				"name": "Chatbots",
+				"slug": "chatbots",
+				"description": "Explorations of chatbot technologies and their applications in enhancing customer interactions.",
+				"color": "#587BDF"
+			},
+			"20": {
+				"id": 20,
+				"documentId": "zf6lyxf0vrt7mw47ldy9ws8b",
+				"name": "LLM Tools",
+				"slug": "llm-tools",
+				"description": "Platforms and utilities designed for working with large language models to build intelligent applications.",
+				"color": "#587BDF"
+			},
+			"21": {
+				"id": 21,
+				"documentId": "dmsi86di7bhc3lpcjwae6eqo",
+				"name": "Multimodal AI",
+				"slug": "multimodal-ai",
+				"description": "AI systems capable of processing and understanding multiple data types, like text, image, audio, and video.",
+				"color": "#587BDF"
+			},
+			"22": {
+				"id": 22,
+				"documentId": "iwovb1s8y600ak2mi4w7mt1s",
+				"name": "AI Agents for Business",
+				"slug": "ai-agents-for-business",
+				"description": "Specialized AI agents that handle business operations, customer service, marketing, and task automation.",
+				"color": "#587BDF"
+			},
+			"23": {
+				"id": 23,
+				"documentId": "i9rdzw2reaqyitxsv7l8519v",
+				"name": "Business",
+				"slug": "business",
+				"description": "Strategies and discussions on business growth, management, and innovation.",
+				"color": "#D2464F"
+			},
+			"24": {
+				"id": 24,
+				"documentId": "yqaiphd71ej0i87izn400evu",
+				"name": "Startup",
+				"slug": "startup",
+				"description": "Resources and tips for launching and scaling startup ventures.",
+				"color": "#D2464F"
+			},
+			"25": {
+				"id": 25,
+				"documentId": "cfwxzxwz1s8yews6yfurvv3t",
+				"name": "Entrepreneurship",
+				"slug": "entrepreneurship",
+				"description": "Guidance and stories related to starting and running a successful business.",
+				"color": "#D2464F"
+			},
+			"26": {
+				"id": 26,
+				"documentId": "hd7gy3k9yhuw89q9wj3s3seb",
+				"name": "Leadership",
+				"slug": "leadership",
+				"description": "Explorations of leadership styles and their impact on team performance.",
+				"color": "#D2464F"
+			},
+			"27": {
+				"id": 27,
+				"documentId": "rlpv0ne5r89vyeb12sm9lpwx",
+				"name": "Management",
+				"slug": "management",
+				"description": "Techniques and principles for effective team and organizational management.",
+				"color": "#D2464F"
+			},
+			"28": {
+				"id": 28,
+				"documentId": "ipai0cirujqrx134g9pa5oyu",
+				"name": "Customer Experience",
+				"slug": "customer-experience",
+				"description": "Best practices for enhancing customer satisfaction and engagement.",
+				"color": "#D2464F"
+			},
+			"29": {
+				"id": 29,
+				"documentId": "rvla70dsf5k5zszw3v1f9u2w",
+				"name": "Customer Service",
+				"slug": "customer-service",
+				"description": "Best practices, tools, and strategies for delivering exceptional customer support and ensuring positive customer interactions.",
+				"color": "#D2464F"
+			},
+			"30": {
+				"id": 30,
+				"documentId": "m0f2yjuh8o51c26etf48qjla",
+				"name": "Customer Success",
+				"slug": "customer-success",
+				"description": "Approaches to proactively ensuring customer satisfaction, retention, and growth through relationship management and support.",
+				"color": "#D2464F"
+			},
+			"31": {
+				"id": 31,
+				"documentId": "okjlk96b8kv83e69hjvbntq8",
+				"name": "Sales",
+				"slug": "sales",
+				"description": "Insights, techniques, and strategies for boosting sales performance, driving revenue, and building strong customer relationships.",
+				"color": "#D2464F"
+			},
+			"32": {
+				"id": 32,
+				"documentId": "jyvzqptxpxt8yex1q3p61m2u",
+				"name": "Business Growth",
+				"slug": "business-growth",
+				"description": "Tactics and insights for expanding business operations and market reach.",
+				"color": "#D2464F"
+			},
+			"33": {
+				"id": 33,
+				"documentId": "p0n1apd4y0nkjvqke4bxnl2p",
+				"name": "Revenue Operations",
+				"slug": "revenue-operations",
+				"description": "Strategies and tools for aligning sales, marketing, and customer success to maximize growth and revenue.",
+				"color": "#D2464F"
+			},
+			"34": {
+				"id": 34,
+				"documentId": "x5r4p4yg999x8eohxgodoh20",
+				"name": "Operations Automation",
+				"slug": "operations-automation",
+				"description": "Systems that reduce manual tasks and optimize workflows across finance, HR, and business ops.",
+				"color": "#D2464F"
+			},
+			"35": {
+				"id": 35,
+				"documentId": "taz8jbfpg41t85gqkp6wiysq",
+				"name": "SMB Strategy",
+				"slug": "smb-strategy",
+				"description": "Business strategy and growth insights tailored specifically for small and mid-sized companies.",
+				"color": "#D2464F"
+			},
+			"36": {
+				"id": 36,
+				"documentId": "dpe2y6zp86yh3crh24fwk7kk",
+				"name": "Branding",
+				"slug": "branding",
+				"description": "Techniques and insights on building and maintaining a strong brand identity.",
+				"color": "#F3B83D"
+			},
+			"37": {
+				"id": 37,
+				"documentId": "jo04dwd65xymm1yxo49z1uf1",
+				"name": "Marketing",
+				"slug": "marketing",
+				"description": "Approaches and tools for effectively promoting products and services.",
+				"color": "#F3B83D"
+			},
+			"38": {
+				"id": 38,
+				"documentId": "hrke55uag3kh44mhjn6gpwfq",
+				"name": "Vibe Marketing",
+				"slug": "vibe-marketing",
+				"description": "AI-driven brand and content marketing based on real-time customer sentiment and strategic brand positioning.",
+				"color": "#F3B83D"
+			},
+			"39": {
+				"id": 39,
+				"documentId": "rjkggmqhf5uygd8xkj3g5h3i",
+				"name": "Vibe Strategy",
+				"slug": "vibe-strategy",
+				"description": "Future-facing business planning driven by AI insights, pattern detection, and cultural relevance.",
+				"color": "#F3B83D"
+			},
+			"40": {
+				"id": 40,
+				"documentId": "en7rmwzoajhoidl8h674jtuf",
+				"name": "Design Research",
+				"slug": "design-research",
+				"description": "Explorations of design methodologies and user research that inform product development.",
+				"color": "#F3B83D"
+			},
+			"41": {
+				"id": 41,
+				"documentId": "xsk9ohxplqlqkmaus375wham",
+				"name": "AI-Driven Branding",
+				"slug": "ai-driven-branding",
+				"description": "Branding approaches informed by data and powered by intelligent algorithms and content models.",
+				"color": "#F3B83D"
+			},
+			"42": {
+				"id": 42,
+				"documentId": "xjqsmrjy1e9oo6o2qbvlnif4",
+				"name": "Cultural Relevance",
+				"slug": "cultural-relevance",
+				"description": "Marketing and messaging practices that align with real-time social context and cultural trends.",
+				"color": "#F3B83D"
+			},
+			"43": {
+				"id": 43,
+				"documentId": "n2l22s4ahzek0yi0d1tl51sv",
+				"name": "Founder Branding",
+				"slug": "founder-branding",
+				"description": "How founders can shape company perception and lead thought leadership through personal brand.",
+				"color": "#F3B83D"
+			},
+			"44": {
+				"id": 44,
+				"documentId": "kgkqp916zc3rd9altylhxhxh",
+				"name": "Vibe Coding",
+				"slug": "vibe-coding",
+				"description": "A new way of building applications using intuitive prompts, mood, and purpose—code powered by intention.",
+				"color": "#479C6D"
+			},
+			"45": {
+				"id": 45,
+				"documentId": "axm9q3bm9i1y5g620g0ybutv",
+				"name": "API Development",
+				"slug": "api-development",
+				"description": "Discussions on building, testing, and managing APIs to support software integration and functionality.",
+				"color": "#479C6D"
+			},
+			"46": {
+				"id": 46,
+				"documentId": "yk791hjmf9u0imn4ecxpdeg9",
+				"name": "Project Management Tools",
+				"slug": "project-management-tools",
+				"description": "Reviews and guides on tools that assist in managing projects, tasks, and team collaboration.",
+				"color": "#479C6D"
+			},
+			"47": {
+				"id": 47,
+				"documentId": "jijzccbt9c00ph3vb5hc5d4d",
+				"name": "Productivity Tips",
+				"slug": "productivity-tips",
+				"description": "Advice and best practices aimed at improving individual and team productivity in the workplace.",
+				"color": "#479C6D"
+			},
+			"48": {
+				"id": 48,
+				"documentId": "h2yltufk43jts9xnznslzgpl",
+				"name": "Tech Industry Insights",
+				"slug": "tech-industry-insights",
+				"description": "Analyses and opinions on current trends and future directions in the technology sector.",
+				"color": "#479C6D"
+			},
+			"49": {
+				"id": 49,
+				"documentId": "ppkj2ceouf5qxev2abvml20r",
+				"name": "Technology",
+				"slug": "technology",
+				"description": "Explorations of technological advancements, innovations, and their impact across various industries.",
+				"color": "#479C6D"
+			},
+			"50": {
+				"id": 50,
+				"documentId": "qe47jjef2jp4yr73zin9x6g3",
+				"name": "Future Trends",
+				"slug": "future-trends",
+				"description": "Predictions, analyses, and discussions about upcoming trends that will shape industries, technology, and society.",
+				"color": "#479C6D"
+			},
+			"51": {
+				"id": 51,
+				"documentId": "w68hzscmqkv46p8e49trzplz",
+				"name": "No-Code AI",
+				"slug": "no-code-ai",
+				"description": "Platforms that allow users to build AI-driven apps and automations without writing code.",
+				"color": "#479C6D"
+			},
+			"52": {
+				"id": 52,
+				"documentId": "gworyfd4lgeapjhhf24ghnmt",
+				"name": "Workflow Automation",
+				"slug": "workflow-automation",
+				"description": "Techniques and tools to automate repetitive tasks and streamline end-to-end business processes.",
+				"color": "#479C6D"
+			},
+			"53": {
+				"id": 53,
+				"documentId": "r2zf850gadcng6wjmk8n5o8j",
+				"name": "Voice AI",
+				"slug": "voice-ai",
+				"description": "AI technologies that interact via speech — from virtual phone agents to voice-driven apps.",
+				"color": "#479C6D"
+			},
+			"54": {
+				"id": 54,
+				"documentId": "r2e3s2u8b7j6eyppuadibkv4",
+				"name": "Psychology",
+				"slug": "psychology",
+				"description": "Insights into psychological factors influencing success and workplace dynamics.",
+				"color": "#F3B83D"
+			},
+			"55": {
+				"id": 55,
+				"documentId": "wjauth09s14s7zln7gv4dn54",
+				"name": "Mental Health",
+				"slug": "mental-health",
+				"description": "Discussions on the importance of mental well-being, especially in entrepreneurial settings.",
+				"color": "#F3B83D"
+			},
+			"56": {
+				"id": 56,
+				"documentId": "bxgst7b9u3f8hjzfpxosh5a9",
+				"name": "Career Development",
+				"slug": "career-development",
+				"description": "Advice and strategies for professional growth and career advancement.",
+				"color": "#F3B83D"
+			},
+			"57": {
+				"id": 57,
+				"documentId": "krkd04mcxv5e0vajpju3qvwu",
+				"name": "Women in Tech",
+				"slug": "women-in-tech",
+				"description": "Highlighting the experiences and challenges of women in the technology sector.",
+				"color": "#F3B83D"
+			},
+			"60": {
+				"id": 60,
+				"documentId": "n8s9hzrgzsliu4swiz89z89n",
+				"name": "AI Studio",
+				"slug": "ai-studio",
+				"description": "A platform or toolset designed for creating and managing AI-driven content or workflows.",
+				"color": "#7F53E7"
+			},
+			"61": {
+				"id": 61,
+				"documentId": "lbsoccrahm7rj0c2gi0uceqb",
+				"name": "AI-Human Collaboration",
+				"slug": "ai-human-collaboration",
+				"description": "The evolving relationship between humans and AI working together in harmony.",
+				"color": "#7F53E7"
+			},
+			"62": {
+				"id": 62,
+				"documentId": "t7rvk60njkj1f419lsef4g6j",
+				"name": "Artificial Intelligence",
+				"slug": "artificial-intelligence",
+				"description": "Insights and strategies around Artificial Intelligence in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"63": {
+				"id": 63,
+				"documentId": "micrevms9x7nmd4mymeel176",
+				"name": "Brand Building",
+				"slug": "brand-building",
+				"description": "Building, promoting, and evolving a company's image and message.",
+				"color": "#F3B83D"
+			},
+			"64": {
+				"id": 64,
+				"documentId": "du0oy9yorwo024jmg2hskmh5",
+				"name": "Business Communication",
+				"slug": "business-communication",
+				"description": "Unified platforms and technologies to streamline messaging and calls.",
+				"color": "#D2464F"
+			},
+			"65": {
+				"id": 65,
+				"documentId": "dwu3cf60ap2ezux61pbliy6k",
+				"name": "Business Management",
+				"slug": "business-management",
+				"description": "Insights and strategies around Business Management in today's tech-driven world.",
+				"color": "#D2464F"
+			},
+			"66": {
+				"id": 66,
+				"documentId": "a31ieqoyzj49n9cltyhy4bsx",
+				"name": "Company Culture",
+				"slug": "company-culture",
+				"description": "Insights and strategies around Company Culture in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"67": {
+				"id": 67,
+				"documentId": "rv7wo14q3kwssryox6wiiltb",
+				"name": "Content Marketing",
+				"slug": "content-marketing",
+				"description": "Building, promoting, and evolving a company's image and message.",
+				"color": "#F3B83D"
+			},
+			"68": {
+				"id": 68,
+				"documentId": "itir23slqxgop3b6c5zmm4l3",
+				"name": "CRM",
+				"slug": "crm",
+				"description": "Tools and strategies for managing customer relationships and communications.",
+				"color": "#D2464F"
+			},
+			"69": {
+				"id": 69,
+				"documentId": "j211quh72r6myjftz3eo67m5",
+				"name": "Customer Loyalty",
+				"slug": "customer-loyalty",
+				"description": "Engagement, support, and experience strategies to serve your audience.",
+				"color": "#D2464F"
+			},
+			"70": {
+				"id": 70,
+				"documentId": "q79w5nllb23ntsf4wrmbw9mg",
+				"name": "Customer Relationships",
+				"slug": "customer-relationships",
+				"description": "Engagement, support, and experience strategies to serve your audience.",
+				"color": "#D2464F"
+			},
+			"71": {
+				"id": 71,
+				"documentId": "ls1xzv9z7n5rh3vzxolgdvsu",
+				"name": "Deep Learning",
+				"slug": "deep-learning",
+				"description": "Insights and strategies around Deep Learning in today's tech-driven world.",
+				"color": "#587BDF"
+			},
+			"72": {
+				"id": 72,
+				"documentId": "rzxcriryjlolyh71mlgk0xx4",
+				"name": "Deep Research",
+				"slug": "deep-research",
+				"description": "Advanced investigation and analysis powered by AI tools and techniques.",
+				"color": "#7F53E7"
+			},
+			"73": {
+				"id": 73,
+				"documentId": "v3hsyy6s8r2i4ucjxpc4blqf",
+				"name": "Dental Practices",
+				"slug": "dental-practices",
+				"description": "Insights and strategies around Dental Practices in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"74": {
+				"id": 74,
+				"documentId": "zhjyhq12y37hkwk2ckskid2q",
+				"name": "Digital Marketing",
+				"slug": "digital-marketing",
+				"description": "Building, promoting, and evolving a company's image and message.",
+				"color": "#F3B83D"
+			},
+			"76": {
+				"id": 76,
+				"documentId": "rc6p174ddtvfmouzhruze87h",
+				"name": "Instagram",
+				"slug": "instagram",
+				"description": "Insights and strategies around Instagram in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"77": {
+				"id": 77,
+				"documentId": "gtdul95tszgehpgey7qdqukk",
+				"name": "Integrations",
+				"slug": "integrations",
+				"description": "Connecting systems, platforms, or tools for a seamless operational experience.",
+				"color": "#7F53E7"
+			},
+			"79": {
+				"id": 79,
+				"documentId": "lsl849695o2io1nu1rztrnte",
+				"name": "Machine Learning",
+				"slug": "machine-learning",
+				"description": "Insights and strategies around Machine Learning in today's tech-driven world.",
+				"color": "#587BDF"
+			},
+			"81": {
+				"id": 81,
+				"documentId": "s4vw1hhdrtlav1ekfz9j8p2s",
+				"name": "Physical Health",
+				"slug": "physical-health",
+				"description": "Insights and strategies around Physical Health in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"82": {
+				"id": 82,
+				"documentId": "wq1il85ui741spq8tzyx5i3h",
+				"name": "Productivity",
+				"slug": "productivity",
+				"description": "Techniques, tools, and mindsets to work smarter and achieve more.",
+				"color": "#479C6D"
+			},
+			"83": {
+				"id": 83,
+				"documentId": "q1avdbyptmc82gfc15uyz9in",
+				"name": "Remote Work",
+				"slug": "remote-work",
+				"description": "Techniques, tools, and mindsets to work smarter and achieve more.",
+				"color": "#479C6D"
+			},
+			"84": {
+				"id": 84,
+				"documentId": "i76er9k9fchwgu9fuccccli6",
+				"name": "SaaS",
+				"slug": "saas",
+				"description": "Insights and strategies around SaaS in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"85": {
+				"id": 85,
+				"documentId": "fz9dw2m9sk7jxjntjjh8dkg4",
+				"name": "Small Business",
+				"slug": "small-business",
+				"description": "Insights and strategies around Small Business in today's tech-driven world.",
+				"color": "#D2464F"
+			},
+			"86": {
+				"id": 86,
+				"documentId": "u50h9p5auddyj6xpgmu0gz9d",
+				"name": "Social Media",
+				"slug": "social-media",
+				"description": "Insights and strategies around Social Media in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"87": {
+				"id": 87,
+				"documentId": "po6zv1vscag934muuxdm93te",
+				"name": "Solopreneurs",
+				"slug": "solopreneurs",
+				"description": "Insights and strategies around Solopreneurs in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"88": {
+				"id": 88,
+				"documentId": "u8b9tkpg5reviabzrlkyzhqb",
+				"name": "Storytelling",
+				"slug": "storytelling",
+				"description": "Insights and strategies around Storytelling in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"89": {
+				"id": 89,
+				"documentId": "p1qk3rg7pknsnwl578x1r487",
+				"name": "Telework",
+				"slug": "telework",
+				"description": "Techniques, tools, and mindsets to work smarter and achieve more.",
+				"color": "#479C6D"
+			},
+			"90": {
+				"id": 90,
+				"documentId": "nh3i6det03g5cad6natlsdfy",
+				"name": "Time Management",
+				"slug": "time-management",
+				"description": "Insights and strategies around Time Management in today's tech-driven world.",
+				"color": "#F3B83D"
+			},
+			"91": {
+				"id": 91,
+				"documentId": "nic9i64q2ckjx828mk6gp659",
+				"name": "Unified Communications",
+				"slug": "unified-communications",
+				"description": "Insights into streamlined messaging, calling, and unified communication systems.",
+				"color": "#7F53E7"
+			},
+			"92": {
+				"id": 92,
+				"documentId": "gqq02k414wicdjwikhifs4np",
+				"name": "Work Culture",
+				"slug": "work-culture",
+				"description": "Techniques, tools, and mindsets to work smarter and achieve more.",
+				"color": "#F3B83D"
+			},
+			"93": {
+				"id": 93,
+				"documentId": "dod13asiejilwz9hsv3ffssz",
+				"name": "Work-Life Balance",
+				"slug": "work-life-balance",
+				"description": "Techniques, tools, and mindsets to work smarter and achieve more.",
+				"color": "#479C6D"
+			},
+			"94": {
+				"id": 94,
+				"documentId": "er9mqrib9ada29gy31w6ia07",
+				"name": "Workplace",
+				"slug": "workplace",
+				"description": "Techniques, tools, and mindsets to work smarter and achieve more.",
+				"color": "#479C6D"
+			},
+			"95": {
+				"id": 95,
+				"documentId": "nddzewrzbgs742mfes17hzdd",
+				"name": "Workplace Wellness",
+				"slug": "workplace-wellness",
+				"description": "Techniques, tools, and mindsets to work smarter and achieve more.",
+				"color": "#479C6D"
+			},
+			"96": {
+				"id": 96,
+				"documentId": "ko1fzw8mozspadw6zvcu5x2v",
+				"name": "Writing Tools",
+				"slug": "writing-tools",
+				"description": "Insights and strategies around Writing Tools in today's tech-driven world.",
+				"color": "#479C6D"
+			}
+		}
+	}
+}
